@@ -66,7 +66,7 @@
         android:minWidth="120dp"
         android:minHeight="120dp"
         app:cardCornerRadius="5dp"
-        android:visibility="visible"
+        android:visibility="gone"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -76,7 +76,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/imghome"
             android:layout_marginLeft="0dp"
-            android:visibility="gone"
+
             tools:ignore="ContentDescription" />
 
         <com.denzcoskun.imageslider.ImageSlider
@@ -130,10 +130,36 @@
 
     </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewFirebase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/imageSliderFirebaseFirestore"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:iss_auto_cycle="true"
+                app:iss_corner_radius="10"
+                app:iss_delay="1000"
+                app:iss_period="3000"
+                app:iss_title_background="@drawable/gradient" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
         android:orientation="horizontal">
 
         <TextView
@@ -146,7 +172,6 @@
             android:textColor="#707070"
             android:textSize="25sp"
             android:textStyle="bold"
-            android:visibility="gone"
             tools:ignore="TextContrastCheck" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -154,7 +179,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
-        android:visibility="gone"
+        android:visibility="visible"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
@@ -247,12 +272,12 @@
                 app:cornerRadius="20dp" />
 
             <Button
-                android:id="@+id/btnFragment"
+                android:id="@+id/prueba"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_weight="1"
                 android:backgroundTint="#DB9423"
-                android:text="Prueba de Conección"
+                android:text="Prueba Slider"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:visibility="gone"
@@ -262,53 +287,6 @@
 
     </ScrollView>
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/purple_500"
-        app:tabTextColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
-        android:visibility="gone">
-
-    </com.google.android.material.tabs.TabLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayoutMenuFragment"
-        android:layout_width="match_parent"
-        android:layout_height="41dp"
-        android:background="@color/purple_500"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:tabTextColor="@color/white">
-
-        <Button
-            android:id="@+id/btnFragmentMenus"
-            android:layout_width="136dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center_horizontal"
-            android:textSize="13sp"
-            android:text="Menus" />
-
-        <Button
-            android:id="@+id/btnFragmentSnack"
-            android:layout_width="136dp"
-            android:layout_height="45dp"
-            android:textSize="13sp"
-            android:text="Antojitos" />
-
-        <Button
-            android:id="@+id/btnFragmentAbout"
-            android:layout_width="136dp"
-            android:layout_height="45dp"
-            android:textSize="12sp"
-            android:text="Conocenos" />
-    </LinearLayout>
-
     <TextView
         android:id="@+id/powerTxt2"
         android:layout_width="match_parent"
@@ -317,18 +295,6 @@
         android:text="@string/version"
         android:textColor="#707070"
         android:textSize="18sp"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragmentContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"/>
-    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

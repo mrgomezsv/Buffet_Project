@@ -36,6 +36,7 @@ import com.google.android.play.core.appupdate.AppUpdateManagerFactory
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import androidx.constraintlayout.motion.widget.Animatable as Animatable1
 
 enum class ProviderType{
@@ -55,6 +56,11 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
 
     private lateinit var firebaseAuth: FirebaseAuth
+
+    // variables privadas para slider
+
+    private var imageSlider: ImageSlider? = null
+    var database = FirebaseFirestore.getInstance()
 
     /////////////////SECCION 1 PARA NOMBRE EN BARRA/////////////////
     private lateinit var authStateListener: FirebaseAuth.AuthStateListener
@@ -97,13 +103,17 @@ class HomeActivity : AppCompatActivity() {
         link2()
         newMenu()
         newSnacks()
+        scrolling()
+        pruebaslider()
+        sliderFirebaseFirestore()
+        //slider()
 
         conet()
 
         appUpdate = AppUpdateManagerFactory.create(this)
         checkUpdate()
 
-        slider()
+        sliderFirebaseFirestore()
 
         //Logica para mostrar fragment
         /*
@@ -128,11 +138,44 @@ class HomeActivity : AppCompatActivity() {
             override fun onTabReselected(tab: TabLayout.Tab?) {}
         })*/
 
-        binding.btnFragmentMenus.setOnClickListener { replaceFragment(Menus()) }
+        /*binding.btnFragmentMenus.setOnClickListener { replaceFragment(Menus()) }
 
         binding.btnFragmentSnack.setOnClickListener { replaceFragment(Snack()) }
 
-        binding.btnFragmentAbout.setOnClickListener { replaceFragment(About()) }
+        binding.btnFragmentAbout.setOnClickListener { replaceFragment(About()) }*/
+    }
+
+    private fun sliderFirebaseFirestore(){ // funcion de banner slider home
+
+        imageSlider = findViewById(R.id.imageSliderFirebaseFirestore)
+        val slideModels = java.util.ArrayList<SlideModel>()
+
+        database.collection("Images").get()
+            .addOnCompleteListener { task -> //now we will check if task is successful
+                if (task.isSuccessful) {
+                    for (queryDocumentSnapshot in task.result) {
+                        slideModels.add(
+                            SlideModel(
+                                queryDocumentSnapshot.getString("url"),
+                                ScaleTypes.FIT
+                            )
+                        )
+
+                        var imageSlider : ImageSlider = findViewById(R.id.imageSliderFirebaseFirestore)
+                        imageSlider.setImageList(slideModels, ScaleTypes.FIT)
+                    }
+                } else {
+                    Toast.makeText(this@HomeActivity, "No puedo cargar las imágenes", Toast.LENGTH_SHORT)
+                        .show()
+                }
+            }
+            .addOnFailureListener {
+                Toast.makeText(
+                    this@HomeActivity,
+                    "No puedo cargar las imágenes",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
     }
 
     private fun replaceFragment(fragment : Fragment){
@@ -144,7 +187,7 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-    private fun slider() {
+    /*private fun slider() {
         val imageSlider = findViewById<ImageSlider>(R.id.imageSlider)
         val imageList = ArrayList<SlideModel>()
 
@@ -155,7 +198,9 @@ class HomeActivity : AppCompatActivity() {
         imageList.add(SlideModel("https://buffetproevent.com/wp-content/uploads/2022/04/RecoleccionSanMiguel.png",""))
 
         imageSlider.setImageList(imageList, ScaleTypes.FIT)
-    }
+
+
+    }*/
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.nav_menu,menu)
@@ -296,6 +341,23 @@ class HomeActivity : AppCompatActivity() {
         val btnNewSnack : Button = findViewById(R.id.btnSnackNew)
         btnNewSnack.setOnClickListener {
             val intent = Intent(this, MenuRecyclerviewSnacks()::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun scrolling(){
+        val btnScrolling : Button = findViewById(R.id.btnScrolling)
+        btnScrolling.setOnClickListener {
+            val intent = Intent(this, ScrollingActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
+
+    private fun pruebaslider(){
+        val prueba : Button = findViewById(R.id.prueba)
+        prueba.setOnClickListener {
+            val intent = Intent(this, Java2::class.java)
             startActivity(intent)
         }
     }
