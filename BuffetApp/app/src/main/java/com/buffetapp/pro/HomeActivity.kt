@@ -104,7 +104,7 @@ class HomeActivity : AppCompatActivity() {
         newMenu()
         newSnacks()
         scrolling()
-        pruebaslider()
+
         sliderFirebaseFirestore()
         //slider()
 
@@ -115,34 +115,6 @@ class HomeActivity : AppCompatActivity() {
 
         sliderFirebaseFirestore()
 
-        //Logica para mostrar fragment
-        /*
-        tabLayout = findViewById(R.id.tabLayout)
-        viewPager = findViewById(R.id.viewPager)
-
-        tabLayout.addTab(tabLayout.newTab().setText("Menus"))
-        tabLayout.addTab(tabLayout.newTab().setText("Snack"))
-        tabLayout.addTab(tabLayout.newTab().setText("About"))
-        tabLayout.tabGravity = TabLayout.GRAVITY_FILL
-        
-        val adapter = MyAdapterFragmentHome(this,supportFragmentManager,tabLayout.tabCount)
-        viewPager.adapter = adapter
-
-        viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
-        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                viewPager.currentItem = tab!!.position
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {}
-            override fun onTabReselected(tab: TabLayout.Tab?) {}
-        })*/
-
-        /*binding.btnFragmentMenus.setOnClickListener { replaceFragment(Menus()) }
-
-        binding.btnFragmentSnack.setOnClickListener { replaceFragment(Snack()) }
-
-        binding.btnFragmentAbout.setOnClickListener { replaceFragment(About()) }*/
     }
 
     private fun sliderFirebaseFirestore(){ // funcion de banner slider home
@@ -352,13 +324,5 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-    }
-
-    private fun pruebaslider(){
-        val prueba : Button = findViewById(R.id.prueba)
-        prueba.setOnClickListener {
-            val intent = Intent(this, Java2::class.java)
-            startActivity(intent)
-        }
     }
 }

@@ -13,9 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BuffetApp">
         <activity
-            android:name=".Java2"
-            android:exported="false" />
-        <activity
             android:name=".YearActivity"
             android:exported="false"
             android:parentActivityName=".Opciones.OurServices"

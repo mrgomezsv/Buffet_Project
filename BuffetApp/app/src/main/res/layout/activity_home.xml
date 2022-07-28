@@ -150,7 +150,7 @@
                 app:iss_auto_cycle="true"
                 app:iss_corner_radius="10"
                 app:iss_delay="1000"
-                app:iss_period="3000"
+                app:iss_period="2000"
                 app:iss_title_background="@drawable/gradient" />
 
         </LinearLayout>
