@@ -12,51 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BuffetApp">
-        <activity
-            android:name=".YearActivity"
-            android:exported="false"
-            android:parentActivityName=".Opciones.OurServices"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".OurServices.BodasActivity"
-            android:exported="false"
-            android:parentActivityName=".Opciones.OurServices"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".ScrollingActivity"
             android:exported="false"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/Theme.BuffetApp.NoActionBar" />
-        <activity
-            android:name=".MainNetwork"
-            android:exported="false"
-            android:parentActivityName=".HomeActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".OurServices.SocialesActivity"
-            android:exported="false"
-            android:parentActivityName=".Opciones.OurServices"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".OurServices.CristaleriaActivity"
-            android:exported="false"
-            android:parentActivityName=".Opciones.OurServices"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Opciones.MenuRecyclerviewSnacks"
-            android:exported="false"
-            android:parentActivityName=".HomeActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Opciones.MenuRecyclerView"
-            android:exported="false"
-            android:parentActivityName=".HomeActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Opciones.OurServices"
-            android:exported="false"
-            android:parentActivityName=".HomeActivity"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".Login.Welcome"
             android:exported="false"
@@ -87,11 +49,7 @@
             android:name=".HomeActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".Opciones.AboutUsActivity"
-            android:exported="false"
-            android:parentActivityName=".HomeActivity"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".Login.SplashScreenActivity"
             android:exported="true"

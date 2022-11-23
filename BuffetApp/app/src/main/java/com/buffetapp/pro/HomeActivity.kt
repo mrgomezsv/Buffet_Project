@@ -1,30 +1,18 @@
 package com.buffetapp.pro
 
 import android.content.Intent
-import android.graphics.drawable.Animatable
 import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
-import com.buffetapp.pro.AdapterFragment.MyAdapterFragmentHome
-import com.buffetapp.pro.Fragment.About
-import com.buffetapp.pro.Fragment.Menus
-import com.buffetapp.pro.Fragment.Snack
 import com.buffetapp.pro.Login.MainActivity
 import com.buffetapp.pro.Login.Welcome
-import com.buffetapp.pro.Opciones.*
 import com.buffetapp.pro.databinding.ActivityHomeBinding
-import com.buffetapp.pro.databinding.ActivityHomeFragmentBinding
-import com.buffetapp.pro.databinding.FragmentMenusBinding
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
@@ -37,7 +25,6 @@ import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import androidx.constraintlayout.motion.widget.Animatable as Animatable1
 
 enum class ProviderType{
     BASIC
@@ -97,18 +84,11 @@ class HomeActivity : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
-        aboutUs() // Ir a Sobre Nosotros
-        services() // Ir a Servicios
+
         configAuthName()// Para el Nombre en la barras
         link2()
-        newMenu()
-        newSnacks()
-        scrolling()
 
         sliderFirebaseFirestore()
-        //slider()
-
-        conet()
 
         appUpdate = AppUpdateManagerFactory.create(this)
         checkUpdate()
@@ -149,30 +129,6 @@ class HomeActivity : AppCompatActivity() {
                 ).show()
             }
     }
-
-    private fun replaceFragment(fragment : Fragment){
-
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fragmentContainer,fragment)
-        fragmentTransaction.commit()
-
-    }
-
-    /*private fun slider() {
-        val imageSlider = findViewById<ImageSlider>(R.id.imageSlider)
-        val imageList = ArrayList<SlideModel>()
-
-        imageList.add(SlideModel("https://buffetproevent.com/wp-content/uploads/2022/04/Somos.png",""))
-        imageList.add(SlideModel("https://buffetproevent.com/wp-content/uploads/2022/04/GuadalupanoExpress.png",""))
-        imageList.add(SlideModel("https://buffetproevent.com/wp-content/uploads/2022/04/slider_antojitos.png",""))
-        imageList.add(SlideModel("https://buffetproevent.com/wp-content/uploads/2022/04/RecoleccionChinameca.png",""))
-        imageList.add(SlideModel("https://buffetproevent.com/wp-content/uploads/2022/04/RecoleccionSanMiguel.png",""))
-
-        imageSlider.setImageList(imageList, ScaleTypes.FIT)
-
-
-    }*/
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.nav_menu,menu)
@@ -254,32 +210,6 @@ class HomeActivity : AppCompatActivity() {
             binding.emailTv.text = email
 
         }
-
-        val sudo  = "mrgomez@webforallsv.com"
-        val btnservice : Button = findViewById(R.id.btnService)
-        val btnnet : Button = findViewById(R.id.btnNet)
-        val btnscrolling : Button = findViewById(R.id.btnScrolling)
-        if(binding.emailTv.text == sudo){
-            btnservice.visibility = View.VISIBLE
-            btnnet.visibility = View.VISIBLE
-            btnscrolling.visibility = View.VISIBLE
-        }
-    }
-
-    private fun aboutUs(){
-        val btnConocenos : Button = findViewById(R.id.btnConocenos)
-        btnConocenos.setOnClickListener {
-            val intent = Intent(this, AboutUsActivity::class.java)
-            startActivity(intent)
-        }
-    }
-
-    private fun services(){
-        val btnservice : Button = findViewById(R.id.btnService)
-        btnservice.setOnClickListener {
-            val intent = Intent(this, OurServices::class.java)
-            startActivity(intent)
-        }
     }
 
     private fun link2() {// Yo
@@ -291,38 +221,5 @@ class HomeActivity : AppCompatActivity() {
             )
             startActivity(intent)
         }
-    }
-
-    private fun newMenu() {
-        val btnNuevoMenu : Button = findViewById(R.id.btnNuevoMenu)
-        btnNuevoMenu.setOnClickListener {
-            val intent = Intent(this, MenuRecyclerView::class.java)
-            startActivity(intent)
-        }
-    }
-
-    private fun conet(){
-        val btnNet : Button = findViewById(R.id.btnNet)
-        btnNet.setOnClickListener {
-            val intent = Intent(this, MainNetwork::class.java)
-            startActivity(intent)
-        }
-    }
-
-    private fun newSnacks(){
-        val btnNewSnack : Button = findViewById(R.id.btnSnackNew)
-        btnNewSnack.setOnClickListener {
-            val intent = Intent(this, MenuRecyclerviewSnacks()::class.java)
-            startActivity(intent)
-        }
-    }
-
-    private fun scrolling(){
-        val btnScrolling : Button = findViewById(R.id.btnScrolling)
-        btnScrolling.setOnClickListener {
-            val intent = Intent(this, ScrollingActivity::class.java)
-            startActivity(intent)
-        }
-
     }
 }
