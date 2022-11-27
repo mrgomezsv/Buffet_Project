@@ -10,7 +10,6 @@ import android.widget.TextView
 import android.widget.Toast
 import com.buffetapp.pro.HomeActivity
 import com.buffetapp.pro.R
-import com.buffetapp.pro.databinding.ActivityHomeFragmentBinding
 import com.buffetapp.pro.databinding.ActivityWelcomeBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount

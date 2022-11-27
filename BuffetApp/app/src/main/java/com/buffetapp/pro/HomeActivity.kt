@@ -1,30 +1,21 @@
 package com.buffetapp.pro
 
 import android.content.Intent
-import android.graphics.drawable.Animatable
 import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
-import com.buffetapp.pro.AdapterFragment.MyAdapterFragmentHome
-import com.buffetapp.pro.Fragment.About
-import com.buffetapp.pro.Fragment.Menus
-import com.buffetapp.pro.Fragment.Snack
 import com.buffetapp.pro.Login.MainActivity
 import com.buffetapp.pro.Login.Welcome
 import com.buffetapp.pro.Opciones.*
 import com.buffetapp.pro.databinding.ActivityHomeBinding
-import com.buffetapp.pro.databinding.ActivityHomeFragmentBinding
-import com.buffetapp.pro.databinding.FragmentMenusBinding
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
@@ -37,7 +28,6 @@ import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import androidx.constraintlayout.motion.widget.Animatable as Animatable1
 
 enum class ProviderType{
     BASIC
@@ -103,7 +93,7 @@ class HomeActivity : AppCompatActivity() {
         link2()
         newMenu()
         newSnacks()
-        scrolling()
+
 
         sliderFirebaseFirestore()
         //slider()
@@ -148,15 +138,6 @@ class HomeActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
-    }
-
-    private fun replaceFragment(fragment : Fragment){
-
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fragmentContainer,fragment)
-        fragmentTransaction.commit()
-
     }
 
     /*private fun slider() {
@@ -258,11 +239,9 @@ class HomeActivity : AppCompatActivity() {
         val sudo  = "mrgomez@webforallsv.com"
         val btnservice : Button = findViewById(R.id.btnService)
         val btnnet : Button = findViewById(R.id.btnNet)
-        val btnscrolling : Button = findViewById(R.id.btnScrolling)
         if(binding.emailTv.text == sudo){
             btnservice.visibility = View.VISIBLE
             btnnet.visibility = View.VISIBLE
-            btnscrolling.visibility = View.VISIBLE
         }
     }
 
@@ -315,14 +294,5 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this, MenuRecyclerviewSnacks()::class.java)
             startActivity(intent)
         }
-    }
-
-    private fun scrolling(){
-        val btnScrolling : Button = findViewById(R.id.btnScrolling)
-        btnScrolling.setOnClickListener {
-            val intent = Intent(this, ScrollingActivity::class.java)
-            startActivity(intent)
-        }
-
     }
 }

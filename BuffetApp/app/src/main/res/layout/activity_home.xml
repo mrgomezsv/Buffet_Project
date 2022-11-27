@@ -151,6 +151,7 @@
                 app:iss_corner_radius="10"
                 app:iss_delay="1000"
                 app:iss_period="2000"
+
                 app:iss_title_background="@drawable/gradient" />
 
         </LinearLayout>
@@ -179,7 +180,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
-        android:visibility="visible"
+        android:visibility="gone"
         tools:ignore="MissingConstraints">
 
         <LinearLayout

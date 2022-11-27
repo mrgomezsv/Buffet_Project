@@ -23,11 +23,6 @@
             android:parentActivityName=".Opciones.OurServices"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ScrollingActivity"
-            android:exported="false"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/Theme.BuffetApp.NoActionBar" />
-        <activity
             android:name=".MainNetwork"
             android:exported="false"
             android:parentActivityName=".HomeActivity"
