@@ -49,7 +49,7 @@ class LunchFragment : Fragment(){
     //Declaramos el recyclerView
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val recyclerView = view.findViewById<RecyclerView>(R.id.lista_recyclerview)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.lunch_recyclerview)
         layoutManager = LinearLayoutManager(view.context,LinearLayoutManager.VERTICAL,false)
         recyclerView.layoutManager = layoutManager
         adapter = NewsAdapter(newsList)

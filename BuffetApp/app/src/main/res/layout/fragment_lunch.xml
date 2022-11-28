@@ -6,7 +6,7 @@
     tools:context=".home.LunchFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/lista_recyclerview"
+        android:id="@+id/lunch_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingBottom="56dp"/>
