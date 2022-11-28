@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/home"
-        android:icon="@drawable/ic_baseline_ramen_dining_24"
+        android:icon="@drawable/lunch"
         android:title="Almuerzos"
         />
     <item

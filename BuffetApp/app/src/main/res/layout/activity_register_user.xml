@@ -43,7 +43,7 @@
                     android:layout_height="150dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/icon_buffet_dia" />
+                    app:srcCompat="@drawable/icon_buffet" />
 
             </LinearLayout>
 
