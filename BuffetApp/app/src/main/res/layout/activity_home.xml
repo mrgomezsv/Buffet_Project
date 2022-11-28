@@ -59,80 +59,8 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="411dp"
-        android:layout_height="200dp"
-        android:layout_centerHorizontal="true"
-        android:minWidth="120dp"
-        android:minHeight="120dp"
-        app:cardCornerRadius="5dp"
-        android:visibility="gone"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/imgGrupo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/imghome"
-            android:layout_marginLeft="0dp"
-
-            tools:ignore="ContentDescription" />
-
-        <com.denzcoskun.imageslider.ImageSlider
-            android:id="@+id/imageSlider"
-            android:layout_width="match_parent"
-            android:layout_height="210dp"
-            app:iss_auto_cycle="true"
-            app:iss_delay="0"
-            app:iss_placeholder="@color/purple_700"
-            app:iss_error_image="@color/purple_700"
-            app:iss_corner_radius="15"
-            app:iss_selected_dot="@drawable/default_selected_dot"
-            app:iss_unselected_dot="@drawable/default_unselected_dot"
-            app:iss_period="2000"
-            tools:ignore="MissingConstraints"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Somos"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="75dp"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:visibility="gone"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Arte Culinario"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="110dp"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:visibility="gone"/>
-
-        <TextView
-            android:id="@+id/welcomeMain2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="150dp"
-            android:layout_marginLeft="25dp"
-            android:text="de Chinameca"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck"
-            android:visibility="gone"/>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
         android:id="@+id/cardViewFirebase"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -151,7 +79,6 @@
                 app:iss_corner_radius="10"
                 app:iss_delay="1000"
                 app:iss_period="2000"
-
                 app:iss_title_background="@drawable/gradient" />
 
         </LinearLayout>
@@ -159,6 +86,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
@@ -176,117 +104,24 @@
             tools:ignore="TextContrastCheck" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <ScrollView
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:visibility="gone"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:itemBackground="@color/purple_700"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/navigation"/>
 
-        <LinearLayout
-            android:id="@+id/linearOptions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="250dp"
-            android:layout_marginEnd="16dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline2"
-                android:layout_width="8dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical" />
-
-            <Button
-                android:id="@+id/btnNuevoMenu"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:backgroundTint="#DB9423"
-                android:text="Almuersos / Menu"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                app:cornerRadius="20dp" />
-
-            <Button
-                android:id="@+id/btnSnackNew"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:backgroundTint="#DB9423"
-                android:text="Antojitos y Snacks"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                app:cornerRadius="20dp" />
-
-            <Button
-                android:id="@+id/btnConocenos"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:backgroundTint="#DB9423"
-                android:text="ConÓcenos"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                app:cornerRadius="20dp" />
-
-            <Button
-                android:id="@+id/btnScrolling"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:backgroundTint="#DB9423"
-                android:text="Scrolling"
-                android:textColor="@color/white"
-                android:visibility="gone"
-                android:textSize="20sp"
-                app:cornerRadius="20dp" />
-
-            <Button
-                android:id="@+id/btnService"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:backgroundTint="#DB9423"
-                android:text="Nuestros Servicios"
-                android:textColor="@color/white"
-                android:visibility="gone"
-                android:textSize="20sp"
-                app:cornerRadius="20dp" />
-
-            <Button
-                android:id="@+id/btnNet"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:backgroundTint="#DB9423"
-                android:text="Prueba de Conección"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:visibility="gone"
-                app:cornerRadius="20dp" />
-
-            <Button
-                android:id="@+id/prueba"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:backgroundTint="#DB9423"
-                android:text="Prueba Slider"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:visibility="gone"
-                app:cornerRadius="20dp" />
-
-        </LinearLayout>
-
-    </ScrollView>
 
     <TextView
         android:id="@+id/powerTxt2"
@@ -296,6 +131,7 @@
         android:text="@string/version"
         android:textColor="#707070"
         android:textSize="18sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

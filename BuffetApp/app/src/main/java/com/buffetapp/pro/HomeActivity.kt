@@ -5,22 +5,25 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.buffetapp.pro.Login.MainActivity
 import com.buffetapp.pro.Login.Welcome
-import com.buffetapp.pro.Opciones.*
 import com.buffetapp.pro.databinding.ActivityHomeBinding
+import com.buffetapp.pro.home.LunchFragment
+import com.buffetapp.pro.home.SettingsFragment
+import com.buffetapp.pro.home.SnackFragment
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.firebase.ui.auth.ErrorCodes
 import com.firebase.ui.auth.IdpResponse
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
@@ -51,6 +54,8 @@ class HomeActivity : AppCompatActivity() {
 
     private var imageSlider: ImageSlider? = null
     var database = FirebaseFirestore.getInstance()
+
+    lateinit var toolbar: ActionBar// Variable local apra barra de navegacion
 
     /////////////////SECCION 1 PARA NOMBRE EN BARRA/////////////////
     private lateinit var authStateListener: FirebaseAuth.AuthStateListener
@@ -85,26 +90,66 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
-        aboutUs() // Ir a Sobre Nosotros
-        services() // Ir a Servicios
+        //aboutUs() // Ir a Sobre Nosotros
         configAuthName()// Para el Nombre en la barras
         link2()
-        newMenu()
-        newSnacks()
-
-
         sliderFirebaseFirestore()
         //slider()
-
-        conet()
-
         appUpdate = AppUpdateManagerFactory.create(this)
         checkUpdate()
-
         sliderFirebaseFirestore()
 
+        navigation()
+
+        ///////////////////
+
+        toolbar = supportActionBar!!
+        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottom_nav)
+
+        bottomNavigation.setOnItemSelectedListener {
+                item ->
+            when(item.itemId){
+                R.id.home->{
+                    //toolbar.title = "Almuerzos"
+                    val homeFragment = LunchFragment.newInstance()
+                    changeFragment(homeFragment)
+                    return@setOnItemSelectedListener true
+                }
+                R.id.snack->{
+                    //toolbar.title = "Snack"
+                    val profileFragment = SnackFragment.newInstance()
+                    changeFragment(profileFragment)
+                    return@setOnItemSelectedListener true
+                }
+                R.id.settings->{
+                    //toolbar.title = "Settings"
+                    val settingsFragment = SettingsFragment.newInstance()
+                    changeFragment(settingsFragment)
+                    return@setOnItemSelectedListener true
+                }
+            }
+            false
+        }
+        //Mostrar por defecto el fragment que definido a continuación
+        toolbar.title = "Home"
+        val launch = LunchFragment.newInstance()
+        changeFragment(launch)
+
+    }
+
+    private fun navigation(){
+
+
+    }
+
+    private fun changeFragment(fragment: Fragment){
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.container,fragment)
+        transaction.commit()
     }
 
     private fun sliderFirebaseFirestore(){ // funcion de banner slider home
@@ -139,21 +184,6 @@ class HomeActivity : AppCompatActivity() {
                 ).show()
             }
     }
-
-    /*private fun slider() {
-        val imageSlider = findViewById<ImageSlider>(R.id.imageSlider)
-        val imageList = ArrayList<SlideModel>()
-
-        imageList.add(SlideModel("https://buffetproevent.com/wp-content/uploads/2022/04/Somos.png",""))
-        imageList.add(SlideModel("https://buffetproevent.com/wp-content/uploads/2022/04/GuadalupanoExpress.png",""))
-        imageList.add(SlideModel("https://buffetproevent.com/wp-content/uploads/2022/04/slider_antojitos.png",""))
-        imageList.add(SlideModel("https://buffetproevent.com/wp-content/uploads/2022/04/RecoleccionChinameca.png",""))
-        imageList.add(SlideModel("https://buffetproevent.com/wp-content/uploads/2022/04/RecoleccionSanMiguel.png",""))
-
-        imageSlider.setImageList(imageList, ScaleTypes.FIT)
-
-
-    }*/
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.nav_menu,menu)
@@ -235,63 +265,22 @@ class HomeActivity : AppCompatActivity() {
             binding.emailTv.text = email
 
         }
-
-        val sudo  = "mrgomez@webforallsv.com"
-        val btnservice : Button = findViewById(R.id.btnService)
-        val btnnet : Button = findViewById(R.id.btnNet)
-        if(binding.emailTv.text == sudo){
-            btnservice.visibility = View.VISIBLE
-            btnnet.visibility = View.VISIBLE
-        }
     }
 
-    private fun aboutUs(){
+    /*private fun aboutUs(){
         val btnConocenos : Button = findViewById(R.id.btnConocenos)
         btnConocenos.setOnClickListener {
             val intent = Intent(this, AboutUsActivity::class.java)
             startActivity(intent)
         }
-    }
-
-    private fun services(){
-        val btnservice : Button = findViewById(R.id.btnService)
-        btnservice.setOnClickListener {
-            val intent = Intent(this, OurServices::class.java)
-            startActivity(intent)
-        }
-    }
+    }*/
 
     private fun link2() {// Yo
         val txtUrl2: TextView = findViewById(R.id.powerTxt2)
         txtUrl2.setOnClickListener {
             val intent = Intent(
                 Intent.ACTION_VIEW,
-                Uri.parse("https://www.webforallsv.com/portfolio/buffet-proevent-app/")
-            )
-            startActivity(intent)
-        }
-    }
-
-    private fun newMenu() {
-        val btnNuevoMenu : Button = findViewById(R.id.btnNuevoMenu)
-        btnNuevoMenu.setOnClickListener {
-            val intent = Intent(this, MenuRecyclerView::class.java)
-            startActivity(intent)
-        }
-    }
-
-    private fun conet(){
-        val btnNet : Button = findViewById(R.id.btnNet)
-        btnNet.setOnClickListener {
-            val intent = Intent(this, MainNetwork::class.java)
-            startActivity(intent)
-        }
-    }
-
-    private fun newSnacks(){
-        val btnNewSnack : Button = findViewById(R.id.btnSnackNew)
-        btnNewSnack.setOnClickListener {
-            val intent = Intent(this, MenuRecyclerviewSnacks()::class.java)
+                Uri.parse("https://www.webforallsv.com/portfolio/buffet-proevent-app/"))
             startActivity(intent)
         }
     }

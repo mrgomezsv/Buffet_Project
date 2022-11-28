@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview"
+    android:background="#E5d8c8"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="25dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:id="@+id/newImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icon_buffet_dia"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+
+
+            <TextView
+                android:id="@+id/new_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Titulo de la Noticia"
+                android:textSize="22sp"
+                android:textColor="@color/purple_700"/>
+
+            <TextView
+                android:id="@+id/news_resume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Este es un resument de la noticia que queremos leer mas adealnte"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/news_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="15-10-2021"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                android:gravity="right"
+                android:textColor="@color/purple_500"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

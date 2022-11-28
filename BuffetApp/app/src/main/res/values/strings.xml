@@ -10,4 +10,6 @@
     <string name="slogan1">Somos Arte Culinario</string>
     <string name="slogan2">de Chinameca</string>
     <string name="action_settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
