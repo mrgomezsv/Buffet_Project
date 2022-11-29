@@ -5,10 +5,24 @@
     android:layout_height="match_parent"
     tools:context=".home.LunchFragment">
 
+
+    <TextView
+        android:id="@+id/welcomeMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Almuerzos"
+        android:textColor="#707070"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lunch_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="35dp"
         android:paddingBottom="56dp"/>
 
 </FrameLayout>
