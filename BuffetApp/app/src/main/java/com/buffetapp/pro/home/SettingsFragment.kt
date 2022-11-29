@@ -1,14 +1,24 @@
 package com.buffetapp.pro.home
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.findFragment
+import com.buffetapp.pro.Opciones.OurServices
 import com.buffetapp.pro.OurServices.BodasActivity
 import com.buffetapp.pro.R
+import com.buffetapp.pro.databinding.FragmentSettingsBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,6 +34,8 @@ class SettingsFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+    private lateinit var binding: FragmentSettingsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +53,15 @@ class SettingsFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_settings, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        facebookFragment()
+        webFragment()
+        whatsappFragment()
+        btnServicesFragment()
+        //callFragment()
+    }
+
     companion object {
         /**
          * Use this factory method to create a new instance of
@@ -53,12 +74,74 @@ class SettingsFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(): SettingsFragment = SettingsFragment()
-            /*SettingsFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }*/
     }
 
+    private fun facebookFragment(){
+        val btnFacebookFragment = view?.findViewById<Button>(R.id.btnFacebookFragment)
+        btnFacebookFragment?.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/profile.php?id=100009157009110"))
+            startActivity(intent)
+        }
+    }
+
+    private fun webFragment(){
+        val btnUrlFragment = view?.findViewById<Button>(R.id.btnUrlFragment)
+        btnUrlFragment?.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://buffetproevent.com/"))
+            startActivity(intent)
+        }
+    }
+
+    private fun whatsappFragment(){
+        val btnWhatsappFragment = view?.findViewById<Button>(R.id.btnWhastappFragment)
+        btnWhatsappFragment?.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://api.whatsapp.com/send?phone=+50378736282&text=Hola,%20necesito%20informaci%C3%B3n%20de%20buffetproevent.com%20me%20comunico%20desde%20Buffet%20App"))
+            startActivity(intent)
+        }
+    }
+
+    private fun btnServicesFragment(){
+        val btnServicesFragment = view?.findViewById<Button>(R.id.btnServicesFragment)
+        btnServicesFragment?.setOnClickListener {
+            val intent = Intent(getActivity(), OurServices::class.java)
+            startActivity(intent)
+        }
+    }
+
+    //Codigo para Boton de Llamadas
+
+   /* private fun callFragment(){
+        //val btnCallFragment = view?.findViewById<Button>(R.id.btnCallFragment)
+        binding.btnCallFragment.setOnClickListener{ requestPermissions() }
+    }
+    private fun requestPermissions(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            when {
+                ContextCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.CALL_PHONE
+                ) == PackageManager.PERMISSION_GRANTED -> {
+                    call()
+                }
+                else -> requestPermissionLauncher.launch(Manifest.permission.CALL_PHONE)
+            }
+        }else{
+            call()
+        }
+    }
+
+    private fun call(){
+        startActivity(Intent(Intent.ACTION_CALL, Uri.parse("tel:$78736282")))
+    }
+
+    private val requestPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ){ isGranted->
+
+        if (isGranted){
+            call()
+        }else{
+            Toast.makeText(this, "Necesita habilitar este permiso para poder Comunicarte con Nosotros", Toast.LENGTH_LONG).show()
+        }
+    }*/
 }

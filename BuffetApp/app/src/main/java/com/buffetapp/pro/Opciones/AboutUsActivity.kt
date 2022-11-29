@@ -12,7 +12,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
-import com.buffetapp.pro.HomeActivity
 import com.buffetapp.pro.R
 import com.buffetapp.pro.databinding.ActivityAboutUsBinding
 
