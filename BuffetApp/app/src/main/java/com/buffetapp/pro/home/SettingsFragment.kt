@@ -59,6 +59,7 @@ class SettingsFragment : Fragment() {
         webFragment()
         whatsappFragment()
         btnServicesFragment()
+        btnPay()
         //callFragment()
     }
 
@@ -104,6 +105,14 @@ class SettingsFragment : Fragment() {
         val btnServicesFragment = view?.findViewById<Button>(R.id.btnServicesFragment)
         btnServicesFragment?.setOnClickListener {
             val intent = Intent(getActivity(), OurServices::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun btnPay(){
+        val btnWompi = view?.findViewById<Button>(R.id.btnWompi)
+        btnWompi?.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://lk.wompi.sv/RuPk"))
             startActivity(intent)
         }
     }
