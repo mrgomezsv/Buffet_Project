@@ -9,7 +9,15 @@
     <string name="version">Power by mrgomez.net - v2.0</string>
     <string name="slogan1">Somos Arte Culinario</string>
     <string name="slogan2">de Chinameca</string>
+    <string name="slogan3">Somos Arte Culinario de Chinameca</string>
     <string name="action_settings">Settings</string>
+    <string name="action_wompi">Pagar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wompi_message2">"Con el Respaldo de Banco Agricola"</string>
+    <string name="wompi_message">
+        Realiza tus pagos a los Servicios y Productos de Buffet Proevent desde
+        tu teléfono y desde donde estes, pagando con tus tarjetas de Credito y Debito o Con tus Bitcoin
+        Con el Respaldo de Banco Agricola en todas tus Transacciones
+    </string>
 </resources>
