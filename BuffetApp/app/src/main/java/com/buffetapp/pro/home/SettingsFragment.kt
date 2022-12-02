@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import com.buffetapp.pro.Opciones.OurServices
 import com.buffetapp.pro.R
 import com.buffetapp.pro.WompiActivity
@@ -53,6 +54,7 @@ class SettingsFragment : Fragment() {
         whatsappFragment()
         btnServicesFragment()
         wompiIntent()
+        linkSettings()
         //callFragment()
     }
 
@@ -106,6 +108,14 @@ class SettingsFragment : Fragment() {
         val btnWompi = view?.findViewById<Button>(R.id.btnWompi)
         btnWompi?.setOnClickListener {
             val intent = Intent(getActivity(), WompiActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun linkSettings(){
+        val linkSettings = view?.findViewById<TextView>(R.id.powerTxtSettings)
+        linkSettings?.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/mrgomez-dev-2650381a6/"))
             startActivity(intent)
         }
     }

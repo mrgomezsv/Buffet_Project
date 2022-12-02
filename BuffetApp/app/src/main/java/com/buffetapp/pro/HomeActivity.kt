@@ -16,8 +16,8 @@ import com.buffetapp.pro.Login.MainActivity
 import com.buffetapp.pro.Login.Welcome
 import com.buffetapp.pro.databinding.ActivityHomeBinding
 import com.buffetapp.pro.home.PackageLunch.LunchFragment
+import com.buffetapp.pro.home.PackageSnack.SnackFragment
 import com.buffetapp.pro.home.SettingsFragment
-import com.buffetapp.pro.home.SnackFragment
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel

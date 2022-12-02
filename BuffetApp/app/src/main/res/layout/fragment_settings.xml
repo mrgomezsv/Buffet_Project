@@ -43,10 +43,9 @@
                 android:layout_below="@id/imageView"
                 android:layout_centerHorizontal="true"
                 android:text="En Buffet ProEvent"
-                android:textColor="#DB9423"
+                android:textColor="@color/purple_700"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:visibility="gone"/>
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/textView2"
@@ -226,7 +225,7 @@
                 app:strokeColor="@color/gris"/>
 
             <TextView
-                android:id="@+id/powerTxt3"
+                android:id="@+id/powerTxtSettings"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="35dp"

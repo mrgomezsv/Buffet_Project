@@ -33,7 +33,7 @@ class SplashScreenActivity : AppCompatActivity() {
         Handler().postDelayed({
             startActivity(Intent(this, Welcome::class.java))
             finish()
-        },1750)
+        },1500)
 
         appUpdate = AppUpdateManagerFactory.create(this)
         checkUpdate()

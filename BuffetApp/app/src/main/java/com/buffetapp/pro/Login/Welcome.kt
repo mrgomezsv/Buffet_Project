@@ -17,7 +17,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import java.lang.Exception
 
@@ -45,7 +44,7 @@ class Welcome : AppCompatActivity() {
 
         mailLogin()
         userRegis()
-        link()
+        linkWelcome()
 
         title = "Bienvenido"
 
@@ -176,13 +175,10 @@ class Welcome : AppCompatActivity() {
         }
     }
 
-    private fun link() {// Yo
-        val txtUrl: TextView = findViewById(R.id.powerTxt)
-        txtUrl.setOnClickListener {
-            val intent = Intent(
-                Intent.ACTION_VIEW,
-                Uri.parse("https://www.webforallsv.com/portfolio/buffet-proevent-app/")
-            )
+    private fun linkWelcome(){
+        val btnUrlWelcome : TextView = findViewById(R.id.powerTxtWelcome)
+        btnUrlWelcome.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/mrgomez-dev-2650381a6/"))
             startActivity(intent)
         }
     }

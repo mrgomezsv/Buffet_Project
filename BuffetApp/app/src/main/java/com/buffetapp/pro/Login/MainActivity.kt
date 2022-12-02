@@ -256,7 +256,7 @@ class MainActivity : AppCompatActivity() {
     private fun link(){//Ir a web
         val txtUrl : TextView = findViewById(R.id.powerTxt)
         txtUrl.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.webforallsv.com/portfolio/buffet-proevent-app/"))
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/mrgomez-dev-2650381a6/"))
             startActivity(intent)
         }
     }
