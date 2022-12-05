@@ -15,6 +15,7 @@ import androidx.viewpager.widget.ViewPager
 import com.buffetapp.pro.Login.MainActivity
 import com.buffetapp.pro.Login.Welcome
 import com.buffetapp.pro.databinding.ActivityHomeBinding
+import com.buffetapp.pro.home.PackageBuffet2022.BuffetNavidenoFragment
 import com.buffetapp.pro.home.PackageLunch.LunchFragment
 import com.buffetapp.pro.home.PackageSnack.SnackFragment
 import com.buffetapp.pro.home.SettingsFragment
