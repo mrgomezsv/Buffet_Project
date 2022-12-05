@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,47 +11,58 @@
         android:id="@+id/img_header"
         android:layout_width="5000dp"
         android:layout_height="100dp"
-        android:src="@drawable/img" />
-
-
-    <TextView
-        android:id="@+id/txt_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/img_header"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="68dp"
-        android:gravity="center"
-        android:text="@string/wompi_message2"
-        android:textSize="18dp"
-        android:textStyle="bold" />
+        android:src="@drawable/img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/txt_resumed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:gravity="center"
         android:text="@string/wompi_message"
         android:textSize="18dp"
         android:textStyle="bold"
-
-        android:layout_below="@+id/txt_title"/>
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/img_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_header"
+        tools:ignore="MissingConstraints"/>
 
     <ImageView
         android:id="@+id/img_card"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="220dp"
+        android:layout_height="180dp"
         android:layout_below="@id/txt_resumed"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="137dp"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="124dp"
-        android:src="@drawable/img_card" />
+        android:src="@drawable/img_card"
+        app:layout_constraintBottom_toTopOf="@+id/btnPay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_resumed"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_card"
+        android:layout_centerHorizontal="true"
+        android:text="@string/legend_card"
+        android:textColor="#707070"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_card"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btnPay"
@@ -59,15 +70,23 @@
         android:layout_height="70dp"
         android:layout_below="@+id/img_card"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="50dp"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="@color/white"
         android:gravity="center"
         android:text="@string/action_wompi"
         android:textAllCaps="false"
-        android:textColor="#536895"
+        android:textColor="@color/azul_facebook"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints" />
+        app:strokeColor="@color/azul_facebook"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/nameParnet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_card"
+        tools:ignore="MissingConstraints"/>
+
+
 
     <TextView
         android:id="@+id/nameParnet"
@@ -78,31 +97,42 @@
         android:gravity="center"
         android:text="Buffet ProEvent"
         android:textColor="@color/black"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/dancing_normal"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/slogan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"/>
 
     <TextView
-        android:id="@+id/somosArte"
+        android:id="@+id/slogan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/nameParnet"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="-1dp"
-        android:layout_marginEnd="45dp"
         android:text="@string/slogan3"
         android:textColor="@color/black"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/powerTxt4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/powerTxt4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/somosArte"
+        android:layout_below="@id/slogan"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="7dp"
         android:layout_marginBottom="1dp"
         android:gravity="center"
         android:text="@string/version"
         android:textColor="#707070"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

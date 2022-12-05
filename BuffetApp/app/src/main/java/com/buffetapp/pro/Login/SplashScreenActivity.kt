@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.res.ResourcesCompat
 import com.buffetapp.pro.R
 import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
@@ -41,6 +43,7 @@ class SplashScreenActivity : AppCompatActivity() {
         title = " "
 
         darkOff()
+        font() //Establecer fuente de texto
     }
     //Logica de Update
     fun checkUpdate(){
@@ -83,5 +86,8 @@ class SplashScreenActivity : AppCompatActivity() {
         }
     }
 
-
+    private fun font(){
+        val rest_parnert : TextView = findViewById(R.id.rest_parnert_screen)
+        rest_parnert.typeface = ResourcesCompat.getFont(this, R.font.dancing_normal)
+    }
 }

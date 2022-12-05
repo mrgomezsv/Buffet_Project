@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 
 class WompiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,6 +14,12 @@ class WompiActivity : AppCompatActivity() {
         setContentView(R.layout.activity_wompi)
         pay()
         me4()
+        font()
+    }
+
+    private fun font(){
+        val slogan : TextView = findViewById(R.id.slogan)
+        slogan.typeface = ResourcesCompat.getFont(this, R.font.dancing_normal)
     }
 
     private fun pay() {

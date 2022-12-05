@@ -113,6 +113,12 @@ class HomeActivity : AppCompatActivity() {
         bottomNavigation.setOnItemSelectedListener {
                 item ->
             when(item.itemId){
+                R.id.buffet->{
+                    //toolbar.title = "Buffet 2022"
+                    val buffetnavideno = BuffetNavidenoFragment.newInstance()
+                    changeFragment(buffetnavideno)
+                    return@setOnItemSelectedListener true
+                }
                 R.id.home->{
                     //toolbar.title = "Almuerzos"
                     val homeFragment = LunchFragment.newInstance()
@@ -135,9 +141,13 @@ class HomeActivity : AppCompatActivity() {
             false
         }
         //Mostrar por defecto el fragment que definido a continuación
-        toolbar.title = "Home"
+        /*toolbar.title = "Home"
         val launch = LunchFragment.newInstance()
-        changeFragment(launch)
+        changeFragment(launch)*/
+
+        toolbar.title = "Home"
+        val buffet = BuffetNavidenoFragment.newInstance()
+        changeFragment(buffet)
 
     }
 

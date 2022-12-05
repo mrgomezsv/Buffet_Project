@@ -30,10 +30,11 @@
             app:layout_constraintRight_toRightOf="parent"/>
 
         <TextView
+            android:id="@+id/rest_parnert_screen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Buffet App"
-            android:textSize="30sp"
+            android:textSize="60sp"
             android:textColor="@color/black"
             android:layout_marginTop="25dp"
             app:layout_constraintBottom_toBottomOf="parent"

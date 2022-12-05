@@ -152,6 +152,7 @@
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 app:cornerRadius="20dp"
+                android:textSize="20dp"
                 app:strokeColor="@color/gris"/>
 
             <Button
@@ -165,11 +166,12 @@
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
                 android:backgroundTint="#FFFFFF"
-                android:text="Pago en Línea - Wompi"
+                android:text="Paga en Línea"
                 android:textAllCaps="false"
                 android:textColor="#536895"
                 android:textStyle="bold"
                 app:cornerRadius="20dp"
+                android:textSize="20dp"
                 app:strokeColor="@color/gris"/>
 
             <Button
@@ -186,6 +188,7 @@
                 android:text="Whatsapp"
                 android:textColor="#FFFFFF"
                 android:textAllCaps="false"
+                android:textSize="20dp"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/gris" />
 
@@ -219,6 +222,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#536895"
                 android:text="Facebook"
+                android:textSize="20dp"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 app:cornerRadius="20dp"
