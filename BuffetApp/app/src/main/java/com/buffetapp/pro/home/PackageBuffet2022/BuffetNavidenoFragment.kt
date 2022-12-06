@@ -1,19 +1,19 @@
 package com.buffetapp.pro.home.PackageBuffet2022
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.buffetapp.pro.R
-import com.buffetapp.pro.WompiActivity
+import com.buffetapp.pro.WhatsAppActivity
 import com.buffetapp.pro.home.PackageBuffet2022.Adapter.Model.Repository.BuffetAdapter
 import com.buffetapp.pro.home.PackageBuffet2022.Adapter.Model.Repository.BuffetViewModel
 
@@ -66,9 +66,12 @@ class BuffetNavidenoFragment : Fragment() {
         adapter.setOnItemClickListener(object : BuffetAdapter.onitemClickListener{
             override fun onItemClick(position: Int) {
 
-                /*val intent = Intent(getActivity(), WompiActivity::class.java)
+                /*val intent = Intent(getActivity(), WhatsAppActivity::class.java)
                 startActivity(intent)*/
                 //Toast.makeText(this@BuffetNavidenoFragment, "Tu Clickeaste en un item. $position",Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://api.whatsapp.com/send?phone=+50378736282&text=Hola,%20necesito%20informaci%C3%B3n%20de%20buffetproevent.com%20me%20comunico%20desde%20Buffet%20App"))
+                startActivity(intent)
             }
 
         })
