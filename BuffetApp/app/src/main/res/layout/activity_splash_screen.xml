@@ -33,7 +33,7 @@
             android:id="@+id/rest_parnert_screen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Buffet App"
+            android:text="@string/app_name"
             android:textSize="60sp"
             android:textColor="@color/black"
             android:layout_marginTop="25dp"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/version"
-        android:textColor="#707070"
+        android:textColor="@color/gris"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent" />
 

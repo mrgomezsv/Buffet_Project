@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF8CE"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".HomeActivity">
 
@@ -33,9 +33,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hola:"
+                android:text="@string/hola"
                 android:visibility="gone"
-                android:textColor="#707070"
+                android:textColor="@color/gris"
                 style="@style/TextAppearance.MaterialComponents.Caption"/>
 
             <TextView
@@ -43,14 +43,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="19sp"
-                android:textColor="#707070"
+                android:textColor="@color/gris"
                 style="@style/TextAppearance.MaterialComponents.Body1"/>
 
             <TextView
                 android:id="@+id/emailTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#707070"
+                android:textColor="@color/gris"
                 android:textStyle="bold"
                 android:textSize="19sp"
                 style="@style/TextAppearance.MaterialComponents.Body1"/>
@@ -97,8 +97,8 @@
             android:layout_height="match_parent"
             android:layout_marginTop="212dp"
             android:gravity="center_horizontal"
-            android:text="Buffet ProEvent App"
-            android:textColor="#707070"
+            android:text="@string/welcomeMain"
+            android:textColor="@color/gris"
             android:textSize="25sp"
             android:textStyle="bold"
             android:visibility="gone"
@@ -130,7 +130,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/version"
-        android:textColor="#707070"
+        android:textColor="@color/gris"
         android:textSize="18sp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent" />

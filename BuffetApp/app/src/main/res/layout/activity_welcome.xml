@@ -45,7 +45,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="¡Bienvenido a Buffet App!"
+                    android:text="@string/welcome"
                     android:textColor="@color/purple_700"
                     android:textSize="25sp"
                     android:textStyle="bold" />
@@ -63,8 +63,8 @@
                     android:layout_marginTop="25dp"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Conoce todos nuestros Productos"
-                    android:textColor="#707070"
+                    android:text="@string/conoce_nuestros"
+                    android:textColor="@color/gris"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -80,8 +80,8 @@
                     android:layout_marginTop="8dp"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="y Servicios disponibles para ti."
-                    android:textColor="#707070"
+                    android:text="@string/servicios"
+                    android:textColor="@color/gris"
                     android:textSize="18sp" />
             </LinearLayout>
 
@@ -107,7 +107,7 @@
                     android:inputType="textEmailAddress"
                     android:minHeight="48dp"
                     android:textColor="#707070"
-                    android:textColorHint="#707070"
+                    android:textColorHint="@color/gris"
                     android:visibility="gone" />
 
                 <androidx.constraintlayout.widget.Guideline
@@ -130,8 +130,8 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="1dp"
-                        android:backgroundTint="#ffffff"
-                        android:text="Google"
+                        android:backgroundTint="@color/white"
+                        android:text="@string/google"
                         android:textAlignment="center"
                         android:textColor="#707070"
                         android:textSize="16sp"
@@ -150,9 +150,9 @@
                         android:layout_height="match_parent"
                         android:layout_marginTop="25dp"
                         android:gravity="center"
-                        android:text="O si lo prefieres accede con"
-                        android:textColor="#707070"
-                        android:textSize="18dp">
+                        android:text="@string/o_si"
+                        android:textColor="@color/gris"
+                        android:textSize="18sp">
 
                     </TextView>
 
@@ -169,10 +169,10 @@
                         android:layout_height="70dp"
                         android:layout_marginTop="25dp"
                         android:layout_gravity="center_horizontal"
-                        android:text="Ingrese con su correo electronico aquí"
+                        android:text="@string/signUpButtonMain"
                         android:textColor="@color/purple_700"
                         android:textAllCaps="false"
-                        android:textSize="17dp"
+                        android:textSize="17sp"
                         style="?attr/materialButtonOutlinedStyle"
                         app:strokeColor="@color/purple_700"
                         app:cornerRadius="20dp" />
@@ -192,9 +192,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
                         android:gravity="center"
-                        android:text="Si no dispones de una cuenta pulse"
-                        android:textColor="#707070"
-                        android:textSize="18dp"
+                        android:text="@string/textView7"
+                        android:textColor="@color/gris"
+                        android:textSize="18sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
@@ -203,9 +203,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
-                        android:text=" aqui"
+                        android:text=" aquí"
                         android:textColor="@color/purple_700"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -224,8 +224,8 @@
                         android:layout_marginTop="35dp"
                         android:gravity="center"
                         android:text="@string/version"
-                        android:textColor="#707070"
-                        android:textSize="18dp"
+                        android:textColor="@color/gris"
+                        android:textSize="18sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 

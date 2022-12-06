@@ -18,8 +18,7 @@
             android:id="@+id/newImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/icon_buffet_dia"
-            />
+            android:src="@drawable/icon_buffet"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,15 +45,15 @@
                 android:id="@+id/news_resume"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Este es un resument de la noticia que queremos leer mas adealnte"
+                android:text=""
                 android:textSize="14sp"/>
 
             <TextView
-                android:id="@+id/news_date"
+                android:id="@+id/news_reservation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="15-10-2021"
-                android:textSize="10sp"
+                android:text=""
+                android:textSize="18sp"
                 android:textStyle="italic"
                 android:gravity="right"
                 android:textColor="@color/purple_500"/>

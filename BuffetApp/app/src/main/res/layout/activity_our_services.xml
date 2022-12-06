@@ -38,8 +38,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/imageViewL"
                     android:layout_centerHorizontal="true"
-                    android:text="Especialistas en:"
-                    android:textColor="#DB9423"
+                    android:text="@string/textViewTitle"
+                    android:textColor="@color/purple_700"
                     android:textSize="25sp"
                     android:textStyle="bold" />
 
@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textViewTitle"
                     android:layout_centerHorizontal="true"
-                    android:text="Todo tipo de Eventos Sociales y"
+                    android:text="@string/textView2"
                     android:textColor="#707070"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -60,8 +60,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textView2"
                     android:layout_centerHorizontal="true"
-                    android:text="Brindandote el mejor servicio"
-                    android:textColor="#707070"
+                    android:text="@string/textView3"
+                    android:textColor="@color/gris"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -71,8 +71,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textView3"
                     android:layout_centerHorizontal="true"
-                    android:text="con la calidad que tu y tus invitados"
-                    android:textColor="#707070"
+                    android:text="@string/textView4"
+                    android:textColor="@color/gris"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -82,8 +82,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textView4"
                     android:layout_centerHorizontal="true"
-                    android:text="merecen."
-                    android:textColor="#707070"
+                    android:text="@string/textView5"
+                    android:textColor="@color/gris"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -161,7 +161,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="45dp"
                         android:layout_weight="1"
-                        android:text="15 Años"
+                        android:text="@string/button4"
                         android:textSize="12sp" />
 
                     <Button
@@ -171,7 +171,7 @@
                         android:layout_marginLeft="90dp"
                         android:layout_marginRight="50dp"
                         android:layout_weight="1"
-                        android:text="Bodas"
+                        android:text="@string/button5"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -245,7 +245,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="45dp"
                         android:layout_weight="1"
-                        android:text="Vajillas"
+                        android:text="@string/button6"
                         android:textSize="12sp" />
 
                     <Button
@@ -255,7 +255,7 @@
                         android:layout_marginLeft="90dp"
                         android:layout_marginRight="50dp"
                         android:layout_weight="1"
-                        android:text="Sociales"
+                        android:text="@string/button7"
                         android:textSize="12sp" />
                 </LinearLayout>
 

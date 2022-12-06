@@ -10,10 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Buffet Navideño 2022"
-        android:textColor="#707070"
-        android:textSize="25sp"
+        android:text="@string/title_buffet2022"
+        android:textColor="@color/black"
+        android:textSize="35sp"
         android:textStyle="bold"
+        android:fontFamily="@font/dancing_normal"
         tools:ignore="TextContrastCheck" />
 
 
@@ -21,7 +22,7 @@
         android:id="@+id/buffet_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="55dp"
         android:paddingBottom="56dp"/>
 
 </FrameLayout>

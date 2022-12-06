@@ -104,9 +104,8 @@ class HomeActivity : AppCompatActivity() {
         checkUpdate()
         sliderFirebaseFirestore()
 
-        navigation()
-
         ///////////////////
+        /*menu navigation bar - fragment*/
 
         toolbar = supportActionBar!!
         val bottomNavigation: BottomNavigationView = findViewById(R.id.bottom_nav)
@@ -149,11 +148,6 @@ class HomeActivity : AppCompatActivity() {
         toolbar.title = "Home"
         val buffet = BuffetNavidenoFragment.newInstance()
         changeFragment(buffet)
-
-    }
-
-    private fun navigation(){
-
 
     }
 

@@ -15,6 +15,8 @@ class WompiActivity : AppCompatActivity() {
         pay()
         me4()
         font()
+
+        title = "Pago en Linea"
     }
 
     private fun font(){

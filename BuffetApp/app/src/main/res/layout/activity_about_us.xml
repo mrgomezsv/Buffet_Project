@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF8CE"
+    android:background="@color/background"
     tools:context=".Opciones.AboutUsActivity">
 
     <ScrollView
@@ -42,30 +42,30 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/imageView"
                 android:layout_centerHorizontal="true"
-                android:text="En Buffet ProEvent"
-                android:textColor="#DB9423"
+                android:text="@string/textViewTitleSetting"
+                android:textColor="@color/purple_500"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textView2About"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textViewTitle"
                 android:layout_centerHorizontal="true"
-                android:text="Somos Expertos en Todo Tipo de "
-                android:textColor="#707070"
+                android:text="@string/textView2About"
+                android:textColor="@color/gris"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textView3About"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView2"
                 android:layout_centerHorizontal="true"
-                android:text="Eventos Sociales y Empresariales"
-                android:textColor="#707070"
+                android:text="@string/textView3About"
+                android:textColor="@color/gris"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -75,8 +75,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView3"
                 android:layout_centerHorizontal="true"
-                android:text="brindándote el mejor servicio y calidad"
-                android:textColor="#707070"
+                android:text="@string/textView4About"
+                android:textColor="@color/gris"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -86,8 +86,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView4"
                 android:layout_centerHorizontal="true"
-                android:text="que te mereces tu y tus invitados."
-                android:textColor="#707070"
+                android:text="@string/textView5About"
+                android:textColor="@color/gris"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -118,9 +118,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardView"
                 android:layout_centerHorizontal="true"
-                android:text="Team Buffet ProEvent"
-                android:textColor="#707070"
-                android:textSize="15dp" />
+                android:text="@string/txtTeam"
+                android:textColor="@color/gris"
+                android:textSize="15sp" />
 
             <Button
                 android:id="@+id/btnCall"
@@ -133,8 +133,8 @@
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
                 android:backgroundTint="#00BCD4"
-                android:text="LlÁmanos"
-                android:textColor="#FFFFFF"
+                android:text="@string/btnCall"
+                android:textColor="@color/white"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/gris" />
 
@@ -148,9 +148,9 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
-                android:backgroundTint="#536895"
-                android:text="Facebook"
-                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/azul_facebook"
+                android:text="@string/facebook"
+                android:textColor="@color/white"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/gris" />
 
@@ -164,9 +164,9 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
-                android:backgroundTint="#DB9423"
-                android:text="buffetproevent.com"
-                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/purple_500"
+                android:text="@string/btnUrlFragment"
+                android:textColor="@color/white"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/gris" />
 
@@ -180,9 +180,9 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
-                android:backgroundTint="#29AF5B"
-                android:text="Whatsapp"
-                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/verde_whatsapp"
+                android:text="@string/whatsapp"
+                android:textColor="@color/white"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/gris" />
 
