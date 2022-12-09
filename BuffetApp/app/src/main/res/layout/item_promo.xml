@@ -10,8 +10,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-
-
         <ImageView
             android:id="@+id/imgSocial"
             android:layout_width="350dp"
@@ -31,6 +29,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imgSocial"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:text="X"
+            android:textColor="@color/white"
+            app:cornerRadius="50dp"
+            tools:ignore="MissingConstraints,TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="325dp"
+            tools:layout_editor_absoluteY="0dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

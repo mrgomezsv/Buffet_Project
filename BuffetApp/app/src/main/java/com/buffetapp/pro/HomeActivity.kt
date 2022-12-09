@@ -32,6 +32,8 @@ import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import java.io.IOException
+import java.net.UnknownHostException
 
 enum class ProviderType{
     BASIC
@@ -90,8 +92,6 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
 
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
@@ -289,4 +289,5 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 }
