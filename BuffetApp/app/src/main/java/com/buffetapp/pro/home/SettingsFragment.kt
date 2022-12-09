@@ -57,7 +57,6 @@ class SettingsFragment : Fragment() {
         wompiIntent()
         linkSettings()
         //callFragment()
-        netb()
     }
 
     companion object {
@@ -72,14 +71,6 @@ class SettingsFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(): SettingsFragment = SettingsFragment()
-    }
-
-    private fun netb(){
-        val btnNet = view?.findViewById<Button>(R.id.btnNet)
-        btnNet?.setOnClickListener {
-            val intent = Intent(getActivity(), MainNetwork::class.java)
-            startActivity(intent)
-        }
     }
 
     private fun facebookFragment(){

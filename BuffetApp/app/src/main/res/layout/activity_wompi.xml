@@ -86,8 +86,6 @@
         app:layout_constraintTop_toBottomOf="@+id/img_card"
         tools:ignore="MissingConstraints"/>
 
-
-
     <TextView
         android:id="@+id/nameParnet"
         android:layout_width="match_parent"
@@ -95,7 +93,7 @@
         android:layout_below="@id/btnPay"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="Buffet ProEvent"
+        android:text="@string/name_partner"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
