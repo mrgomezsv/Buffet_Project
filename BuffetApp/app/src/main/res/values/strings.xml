@@ -65,4 +65,8 @@
         "Realiza tus pagos a los Productos y Servicios de Buffet Proevent desde
         tu teléfono y desde donde estes, pagando con tus tarjetas de Credito y Debito\n"
     </string>
+    <string name="ups_sin_internet">¡UPS! SIN INTERNET</string>
+    <string name="por_favor_compruebe_su_conexi_n_de_red">Por favor, compruebe su conexión de red.</string>
+    <string name="intentar_otra_vez">Intentar otra vez</string>
+    <string name="que_te_mereces_tu_y_tus_invitados">que te mereces tu y tus invitados.</string>
 </resources>

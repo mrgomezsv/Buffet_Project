@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import com.buffetapp.pro.MainNetwork
 import com.buffetapp.pro.Opciones.OurServices
 import com.buffetapp.pro.R
 import com.buffetapp.pro.WompiActivity
@@ -56,6 +57,7 @@ class SettingsFragment : Fragment() {
         wompiIntent()
         linkSettings()
         //callFragment()
+        netb()
     }
 
     companion object {
@@ -70,6 +72,14 @@ class SettingsFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(): SettingsFragment = SettingsFragment()
+    }
+
+    private fun netb(){
+        val btnNet = view?.findViewById<Button>(R.id.btnNet)
+        btnNet?.setOnClickListener {
+            val intent = Intent(getActivity(), MainNetwork::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun facebookFragment(){

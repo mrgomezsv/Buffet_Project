@@ -1,49 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAFBF6"
     tools:context=".MainNetwork">
 
-    <LinearLayout
-        android:id="@+id/LayoutMuestra"
+
+    <ImageView
+        android:id="@+id/dog_image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FAFBF6"
-        android:orientation="vertical">
+        android:layout_height="460dp"
+        android:layout_above="@+id/textViewNet1"
+        android:layout_marginBottom="22dp"
+        android:src="@drawable/dog"
+        tools:ignore="ContenDescription" />
 
-        <ImageView
-                android:id="@+id/dog_image"
-                android:layout_width="match_parent"
-                android:layout_height="460dp"
-                android:src="@drawable/dog"
-                tools:ignore="ContenDescription" />
+    <TextView
+        android:id="@+id/textViewNet1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewNet2"
+        android:layout_marginBottom="0dp"
+        android:text="@string/ups_sin_internet"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¡UPS! SIN INTERNET"
-            android:textColor="@color/black"
-            android:textSize="25dp"/>
+    <TextView
+        android:id="@+id/textViewNet2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/try_again_btn"
+        android:layout_marginBottom="0dp"
+        android:text="@string/por_favor_compruebe_su_conexi_n_de_red"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Por favor, compruebe su conexión de red."
-            android:textColor="@color/black"
-            android:textSize="20dp" />
+    <Button
+        android:id="@+id/try_again_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:backgroundTint="@color/gris"
+        android:text="@string/intentar_otra_vez" />
 
-        <Button
-            android:id="@+id/try_again_btn"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_below="@+id/dog_image"
-            android:layout_centerHorizontal="false"
-            android:layout_marginTop="25dp"
-            android:backgroundTint="@color/gris"
-            android:text="Intentar otra vez" />
-    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

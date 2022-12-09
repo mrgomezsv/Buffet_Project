@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView4"
                 android:layout_centerHorizontal="true"
-                android:text="que te mereces tu y tus invitados."
+                android:text="@string/que_te_mereces_tu_y_tus_invitados"
                 android:textColor="@color/gris"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -122,6 +122,13 @@
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:fontFamily="@font/dancing_normal"/>
+
+            <Button
+                android:id="@+id/btnNet"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="ET"/>
 
             <Button
                 android:id="@+id/btnCallFragment"
