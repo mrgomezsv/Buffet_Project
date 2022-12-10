@@ -12,8 +12,8 @@ android {
         applicationId "com.buffetapp.pro"
         minSdk 21
         targetSdk 33
-        versionCode 13
-        versionName "2.0"
+        versionCode 14
+        versionName "2.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -73,8 +73,8 @@ dependencies {
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation 'com.google.firebase:firebase-database-ktx'
     //
-    implementation 'com.google.firebase:firebase-messaging-ktx:23.1.0'
-    implementation 'com.google.firebase:firebase-messaging:23.1.0'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.1.1'
+    implementation 'com.google.firebase:firebase-messaging:23.1.1'
     // Dependencias para Update App
     implementation("com.google.android.play:core-ktx:1.8.1")
     //
@@ -90,6 +90,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
     //noinspection GradleDependency
     implementation "androidx.activity:activity-ktx:$activity_version"
+    //noinspection GradleDependency
     implementation "androidx.fragment:fragment-ktx:$fragment_version"
     //Image Slides
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
