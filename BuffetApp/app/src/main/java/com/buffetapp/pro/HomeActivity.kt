@@ -1,6 +1,8 @@
 package com.buffetapp.pro
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
 import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
@@ -94,6 +96,9 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         firebaseAuth = FirebaseAuth.getInstance()
+
+        //Funciones
+        verificationInternet()
         checkUser()
         //aboutUs() // Ir a Sobre Nosotros
         configAuthName()// Para el Nombre en la barras
@@ -103,6 +108,7 @@ class HomeActivity : AppCompatActivity() {
         appUpdate = AppUpdateManagerFactory.create(this)
         checkUpdate()
         sliderFirebaseFirestore()
+
 
         ///////////////////
         /*menu navigation bar - fragment*/
@@ -232,6 +238,11 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    fun showToast(context: Context, text: CharSequence) { //Funcion para los Toast
+        val toast = Toast.makeText(context, text, Toast.LENGTH_SHORT)
+        toast.show()
+    }
+
     private fun configAuthName(){
         firebaseAuth = FirebaseAuth.getInstance()
         authStateListener = FirebaseAuth.AuthStateListener { auth ->
@@ -269,6 +280,21 @@ class HomeActivity : AppCompatActivity() {
             binding.nameTv.text = nameUser
             binding.emailTv.text = email
 
+        }
+    }
+
+    private fun verificationInternet(){
+
+        val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val networkInfo = connectivityManager.activeNetworkInfo
+        if (networkInfo != null && networkInfo.isConnected) {
+            // Hay conexión a Internet
+            showToast(this, "Hay conexión a Internet")
+        } else {
+            // No hay conexión a Internet
+            showToast(this, "No hay conexión a Internet")
+            val intent = Intent(this, MainNetwork::class.java)
+            startActivity(intent)
         }
     }
 
