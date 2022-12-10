@@ -98,7 +98,7 @@ class HomeActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         //Funciones
-        verificationInternet()
+
         checkUser()
         //aboutUs() // Ir a Sobre Nosotros
         configAuthName()// Para el Nombre en la barras
@@ -255,6 +255,9 @@ class HomeActivity : AppCompatActivity() {
 
     /////////////////SECCION 2 PARA NOMBRE EN BARRA/////////////////
     override fun onResume() {
+
+        verificationInternet()
+
         super.onResume()
         inProgressUpdate()
         firebaseAuth.addAuthStateListener(authStateListener)
@@ -289,10 +292,10 @@ class HomeActivity : AppCompatActivity() {
         val networkInfo = connectivityManager.activeNetworkInfo
         if (networkInfo != null && networkInfo.isConnected) {
             // Hay conexión a Internet
-            showToast(this, "Hay conexión a Internet")
+            showToast(this, "El Internet a Vuelto!!!")
         } else {
             // No hay conexión a Internet
-            showToast(this, "No hay conexión a Internet")
+            showToast(this, "Ups hay conexión a Internet")
             val intent = Intent(this, MainNetwork::class.java)
             startActivity(intent)
         }

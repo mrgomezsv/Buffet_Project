@@ -1,16 +1,23 @@
 package com.buffetapp.pro.home.PackageLunch
 
+import android.content.Context
+import android.content.Intent
+import android.net.ConnectivityManager
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.buffetapp.pro.MainNetwork
 import com.buffetapp.pro.R
+import com.buffetapp.pro.WompiActivity
 import com.buffetapp.pro.home.PackageLunch.Adapter.LunchAdapter
 import com.buffetapp.pro.home.PackageLunch.Model.LunchViewModel
 
@@ -39,6 +46,16 @@ class LunchFragment : Fragment(){
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+        }
+
+        val connectivityManager = requireActivity().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val networkInfo = connectivityManager.activeNetworkInfo
+        if (networkInfo != null && networkInfo.isConnected) {
+            // Hay conexión a Internet
+        } else {
+            // No hay conexión a Internet
+            val intent = Intent(getActivity(), MainNetwork::class.java)
+            startActivity(intent)
         }
     }
 
@@ -80,4 +97,5 @@ class LunchFragment : Fragment(){
         @JvmStatic
         fun newInstance():LunchFragment = LunchFragment()
     }
+
 }
