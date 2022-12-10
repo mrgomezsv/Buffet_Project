@@ -23,6 +23,7 @@ class LunchAdapter : RecyclerView.Adapter<LunchAdapter.MyViewHolder>(){
 
         holder.nameLunch.text = currentitem.name
         holder.descriptionLunch.text = currentitem.description
+        holder.reservationLunch.text = currentitem.reservation
     }
 
     override fun getItemCount(): Int {
@@ -41,6 +42,7 @@ class LunchAdapter : RecyclerView.Adapter<LunchAdapter.MyViewHolder>(){
 
         val nameLunch : TextView = itemView.findViewById(R.id.title)
         val descriptionLunch : TextView = itemView.findViewById(R.id.news_resume)
+        val reservationLunch : TextView = itemView.findViewById(R.id.news_reservation)
 
     }
 }

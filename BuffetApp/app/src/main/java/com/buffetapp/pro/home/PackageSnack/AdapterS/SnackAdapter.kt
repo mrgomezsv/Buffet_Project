@@ -23,6 +23,7 @@ class SnackAdapter : RecyclerView.Adapter<SnackAdapter.MyViewHolder>(){
 
         holder.nameSnack.text = currentitem.name
         holder.descriptionSnack.text = currentitem.description
+        holder.reservationSnack.text = currentitem.reservation
     }
 
     override fun getItemCount(): Int {
@@ -41,6 +42,6 @@ class SnackAdapter : RecyclerView.Adapter<SnackAdapter.MyViewHolder>(){
 
         val nameSnack : TextView = itemView.findViewById(R.id.title)
         val descriptionSnack : TextView = itemView.findViewById(R.id.news_resume)
-
+        val reservationSnack : TextView = itemView.findViewById(R.id.news_reservation)
     }
 }
