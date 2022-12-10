@@ -124,13 +124,6 @@
                 android:fontFamily="@font/dancing_normal"/>
 
             <Button
-                android:id="@+id/btnNet"
-                android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:text="ET"/>
-
-            <Button
                 android:id="@+id/btnCallFragment"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
