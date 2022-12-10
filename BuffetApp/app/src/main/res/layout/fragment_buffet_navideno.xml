@@ -11,8 +11,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="@string/title_buffet2022"
-        android:textColor="@color/black"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:fontFamily="@font/dancing_normal"
         tools:ignore="TextContrastCheck" />

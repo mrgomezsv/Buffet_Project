@@ -33,7 +33,7 @@
     <string name="button5">Bodas</string>
     <string name="button6">Vajillas</string>
     <string name="button7">Sociales</string>
-    <string name="btnUrlFragment">www.buffetproevent.com</string>
+    <string name="btnUrlFragment">buffetproevent.com</string>
     <string name="btnCall">LlÁmanos</string>
     <string name="textView5About">que te mereces tu y tus invitados.</string>
     <string name="textView4About">brindándote el mejor servicio y calidad</string>
@@ -69,4 +69,8 @@
     <string name="por_favor_compruebe_su_conexi_n_de_red">Por favor, compruebe su conexión de red.</string>
     <string name="intentar_otra_vez">Intentar otra vez</string>
     <string name="que_te_mereces_tu_y_tus_invitados">que te mereces tu y tus invitados.</string>
+    <string name="version_extendida">Power by www.buffetproevent.com - v2.0.1</string>
+    <string name="antojitos_title">Antojitos de Buffet</string>
+    <string name="lunch_title">Almuerzos</string>
+    <string name="btn_call">Llámanos</string>
 </resources>

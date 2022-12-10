@@ -120,7 +120,6 @@
                 android:layout_centerHorizontal="true"
                 android:text="@string/txtTeam"
                 android:textColor="@color/black"
-                android:textSize="15sp"
                 android:fontFamily="@font/dancing_normal"/>
 
             <Button
@@ -134,7 +133,7 @@
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
                 android:backgroundTint="#00BCD4"
-                android:text="Llámanos"
+                android:text="@string/btn_call"
                 android:textAllCaps="false"
                 android:visibility="gone"
                 android:textColor="@color/white"/>
@@ -172,7 +171,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/azul_facebook"
                 app:cornerRadius="20dp"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 app:strokeColor="@color/gris"/>
 
             <Button
@@ -236,7 +235,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="35dp"
                 android:gravity="center"
-                android:text="@string/version"
+                android:text="@string/version_extendida"
                 android:textColor="@color/gris"
                 android:textSize="18sp" />
 
