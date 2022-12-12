@@ -277,7 +277,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }else{
-            //val phote = firebaseUser.photoUrl
+            //val photo = firebaseUser.photoUrl
             val email = firebaseUser.email
             val nameUser = firebaseUser.displayName
             binding.nameTv.text = nameUser
@@ -292,7 +292,7 @@ class HomeActivity : AppCompatActivity() {
         val networkInfo = connectivityManager.activeNetworkInfo
         if (networkInfo != null && networkInfo.isConnected) {
             // Hay conexión a Internet
-            showToast(this, "El Internet a Vuelto!!!")
+            //showToast(this, "El Internet a Vuelto!!!")
         } else {
             // No hay conexión a Internet
             showToast(this, "Ups hay conexión a Internet")
