@@ -212,6 +212,11 @@ class HomeActivity : AppCompatActivity() {
                 finish()
                 //Toast.makeText(this, "Cerrar Sesón", Toast.LENGTH_LONG).show()
             }
+            R.id.nav_user_prolife ->{
+                val intent = Intent(this, UserProfileActivity::class.java)
+                startActivity(intent)
+                //Toast.makeText(this, "Cerrar Sesón", Toast.LENGTH_LONG).show()
+            }
         }
         return super.onOptionsItemSelected(item)
     }

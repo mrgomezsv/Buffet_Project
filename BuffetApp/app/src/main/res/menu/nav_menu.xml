@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item android:id="@+id/nav_user_prolife"
+        android:icon="@drawable/ic_user"
+        android:title="@string/item_menu_profile"/>
+
     <item android:id="@+id/nav_loginOut"
         android:icon="@drawable/ic_out_login_24"
-        android:title="Cerrar Sesión"/>
+        android:title="@string/item_menu_out_sesion"/>
 
 </menu>

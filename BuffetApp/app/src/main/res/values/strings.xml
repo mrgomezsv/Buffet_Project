@@ -74,4 +74,6 @@
     <string name="lunch_title">Almuerzos</string>
     <string name="btn_call">Llámanos</string>
     <string name="title_news_item_fragment">Titulo de la Noticia</string>
+    <string name="item_menu_profile">Mi Perfil</string>
+    <string name="item_menu_out_sesion">Cerrar Sesión</string>
 </resources>
