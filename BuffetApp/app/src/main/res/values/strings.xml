@@ -69,8 +69,9 @@
     <string name="por_favor_compruebe_su_conexi_n_de_red">Por favor, compruebe su conexión de red.</string>
     <string name="intentar_otra_vez">Intentar otra vez</string>
     <string name="que_te_mereces_tu_y_tus_invitados">que te mereces tu y tus invitados.</string>
-    <string name="version_extendida">Power by www.buffetproevent.com - v2.0.1</string>
+    <string name="version_extendida">Power by www.buffetproevent.com   v2.0.2</string>
     <string name="antojitos_title">Antojitos de Buffet</string>
     <string name="lunch_title">Almuerzos</string>
     <string name="btn_call">Llámanos</string>
+    <string name="title_news_item_fragment">Titulo de la Noticia</string>
 </resources>

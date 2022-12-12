@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardview"
-    android:background="#E5d8c8"
+    android:background="@drawable/background_whatsapp"
     android:layout_margin="10dp"
     app:cardCornerRadius="25dp">
 
@@ -37,7 +37,7 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Titulo de la Noticia"
+                android:text="@string/title_news_item_fragment"
                 android:textSize="22sp"
                 android:textColor="@color/purple_700"/>
 

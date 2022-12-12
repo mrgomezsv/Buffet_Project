@@ -132,11 +132,14 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
-                android:backgroundTint="#00BCD4"
+                android:backgroundTint="@color/verde_whatsapp"
                 android:text="@string/btn_call"
                 android:textAllCaps="false"
-                android:visibility="gone"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/ic_phone"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/gris"/>
 
             <Button
                 android:id="@+id/btnUrlFragment"
@@ -152,8 +155,9 @@
                 android:text="@string/btnUrlFragment"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                app:cornerRadius="20dp"
                 android:textSize="18sp"
+                android:drawableLeft="@drawable/ic_web"
+                app:cornerRadius="20dp"
                 app:strokeColor="@color/gris"/>
 
             <Button
@@ -170,8 +174,9 @@
                 android:text="@string/btnWompi"
                 android:textAllCaps="false"
                 android:textColor="@color/azul_facebook"
-                app:cornerRadius="20dp"
+                android:drawableLeft="@drawable/ic_money"
                 android:textSize="18sp"
+                app:cornerRadius="20dp"
                 app:strokeColor="@color/gris"/>
 
             <Button
@@ -189,6 +194,7 @@
                 android:textColor="@color/white"
                 android:textAllCaps="false"
                 android:textSize="18sp"
+                android:drawableLeft="@drawable/fui_ic_mail_white_24dp"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/gris" />
 
@@ -226,6 +232,7 @@
                 android:textSize="20sp"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
+                android:drawableLeft="@drawable/fui_ic_facebook_white_22dp"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/gris"/>
 

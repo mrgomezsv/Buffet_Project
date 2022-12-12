@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import com.buffetapp.pro.MainNetwork
 import com.buffetapp.pro.Opciones.OurServices
 import com.buffetapp.pro.R
 import com.buffetapp.pro.WompiActivity
@@ -56,7 +55,7 @@ class SettingsFragment : Fragment() {
         btnServicesFragment()
         wompiIntent()
         linkSettings()
-        //callFragment()
+        callFragment()
     }
 
     companion object {
@@ -121,40 +120,12 @@ class SettingsFragment : Fragment() {
         }
     }
 
-    //Codigo para Boton de Llamadas
-
-   /* private fun callFragment(){
-        //val btnCallFragment = view?.findViewById<Button>(R.id.btnCallFragment)
-        binding.btnCallFragment.setOnClickListener{ requestPermissions() }
-    }
-    private fun requestPermissions(){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            when {
-                ContextCompat.checkSelfPermission(
-                    this,
-                    Manifest.permission.CALL_PHONE
-                ) == PackageManager.PERMISSION_GRANTED -> {
-                    call()
-                }
-                else -> requestPermissionLauncher.launch(Manifest.permission.CALL_PHONE)
-            }
-        }else{
-            call()
+    private fun callFragment(){
+        val btnCallFragment = view?.findViewById<Button>(R.id.btnCallFragment)
+        btnCallFragment?.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DIAL)
+            intent.data = Uri.parse("tel:78736282")
+            startActivity(intent)
         }
     }
-
-    private fun call(){
-        startActivity(Intent(Intent.ACTION_CALL, Uri.parse("tel:$78736282")))
-    }
-
-    private val requestPermissionLauncher = registerForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ){ isGranted->
-
-        if (isGranted){
-            call()
-        }else{
-            Toast.makeText(this, "Necesita habilitar este permiso para poder Comunicarte con Nosotros", Toast.LENGTH_LONG).show()
-        }
-    }*/
 }

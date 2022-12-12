@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/background_whatsapp"
     tools:context=".Login.Welcome">
 
     <ScrollView
@@ -126,17 +126,17 @@
                     <Button
                         android:id="@+id/googleSignInBtn"
                         style="@style/FirebaseUI.Button.AccountChooser.GoogleButton"
-                        android:layout_width="230dp"
+                        android:layout_width="300dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="1dp"
                         android:backgroundTint="@color/white"
                         android:text="@string/google"
                         android:textAlignment="center"
-                        android:textColor="#707070"
+                        android:textColor="@color/gris"
                         android:textSize="16sp"
                         app:cornerRadius="20dp"
-                        app:strokeColor="#707070" />
+                        app:strokeColor="@color/gris" />
 
                 </LinearLayout>
 

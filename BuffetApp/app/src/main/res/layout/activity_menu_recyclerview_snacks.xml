@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@drawable/background_whatsapp"
     tools:context=".Opciones.MenuRecyclerviewSnacks">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -101,7 +101,7 @@
             android:id="@+id/dog_image"
             android:layout_width="match_parent"
             android:layout_height="460dp"
-            android:src="@drawable/dog"
+            android:src="@drawable/img_main_network"
             app:layout_constraintBottom_toTopOf="@+id/textView8"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContenDescription" />

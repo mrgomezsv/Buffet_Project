@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/background_whatsapp"
     tools:context=".WompiActivity">
 
     <ScrollView
@@ -21,7 +21,7 @@
                 android:id="@+id/img_header"
                 android:layout_width="5000dp"
                 android:layout_height="100dp"
-                android:src="@drawable/img"
+                android:src="@drawable/img_banner_pay"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -98,6 +98,7 @@
                     android:textColor="@color/azul_facebook"
                     android:textStyle="bold"
                     android:textSize="20sp"
+                    android:drawableLeft="@drawable/ic_money"
                     app:strokeColor="@color/azul_facebook"
                     app:layout_constraintBottom_toTopOf="@+id/nameParnet"
                     app:layout_constraintEnd_toEndOf="parent"
