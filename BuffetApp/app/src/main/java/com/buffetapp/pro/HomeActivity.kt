@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.buffetapp.pro.Login.MainActivity
 import com.buffetapp.pro.Login.Welcome
+import com.buffetapp.pro.Opciones.OurServices
 import com.buffetapp.pro.databinding.ActivityHomeBinding
 import com.buffetapp.pro.home.PackageBuffet2022.BuffetNavidenoFragment
 import com.buffetapp.pro.home.PackageLunch.LunchFragment
@@ -210,6 +211,11 @@ class HomeActivity : AppCompatActivity() {
                 val intent = Intent(this, Welcome::class.java)
                 startActivity(intent)
                 finish()
+                //Toast.makeText(this, "Cerrar Sesón", Toast.LENGTH_LONG).show()
+            }
+            R.id.nav_services ->{
+                val intent = Intent(this, OurServices::class.java)
+                startActivity(intent)
                 //Toast.makeText(this, "Cerrar Sesón", Toast.LENGTH_LONG).show()
             }
             R.id.nav_user_prolife ->{

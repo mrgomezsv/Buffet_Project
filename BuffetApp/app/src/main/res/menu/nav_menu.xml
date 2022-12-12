@@ -5,6 +5,11 @@
         android:icon="@drawable/ic_user"
         android:title="@string/item_menu_profile"/>
 
+    <item android:id="@+id/nav_services"
+        android:icon="@drawable/ic_user"
+        android:title="Nuestros Servicios"/>
+
+
     <item android:id="@+id/nav_loginOut"
         android:icon="@drawable/ic_out_login_24"
         android:title="@string/item_menu_out_sesion"/>
