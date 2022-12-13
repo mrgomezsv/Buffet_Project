@@ -7,237 +7,134 @@
     android:background="@drawable/background_whatsapp"
     tools:context=".UserProfileActivity">
 
-    <ScrollView
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/facebook_avatar"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/scode_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/profile_image"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="" />
+
+    <RelativeLayout
+        android:id="@+id/relative_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:layout_below="@+id/scode_profile"
+        android:paddingVertical="10dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="70dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_user_txt"
+                android:textSize="12sp"/>
 
-                <LinearLayout
-                    android:id="@+id/linear"
-                    android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:orientation="vertical"
-                    android:background="@drawable/mygradient">
-
-                    <ImageView
-                        android:layout_width="250dp"
-                        android:layout_height="250dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
-                        android:src="@drawable/icon_buffet"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:textColor="@color/white"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:text="Mario Roberto Gómez Martínez"/>
-
-                </LinearLayout>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="350dp"
-                    android:layout_height="100dp"
-                    android:layout_centerHorizontal="true"
-                    app:cardElevation="16dp"
-                    android:layout_below="@+id/linear"
-                    android:layout_marginTop="-50dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="35dp"
-                        android:weightSum="2">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:text="Texto Tarjeta 1"
-                                android:textSize="18sp"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:textColor="@color/purple_700"
-                                android:text="2"
-                                android:textStyle="bold"
-                                android:textSize="18sp"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:text="Texto Tarjeta 2"
-                                android:textSize="18sp"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:textColor="@color/purple_700"
-                                android:text="5"
-                                android:textStyle="bold"
-                                android:textSize="18sp"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="400dp"
-                    android:layout_marginLeft="80sp">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@android:drawable/ic_dialog_email"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="mrgomez@outlook.com"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="425dp"
-                    android:layout_marginLeft="80sp">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@android:drawable/ic_menu_call"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="(+503) 7756-3510"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="450dp"
-                    android:layout_marginLeft="80sp">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@android:drawable/ic_menu_directions"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="8 Calle Oriente, Barrio San Juan"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="475dp"
-                    android:layout_marginLeft="80sp"
-                    tools:ignore="RtlHardcoded,UseCompoundDrawables">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@android:drawable/ic_menu_mylocation"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="El Salvador"/>
-
-                </LinearLayout>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="350dp"
-                    android:layout_height="100dp"
-                    android:layout_centerHorizontal="true"
-                    app:cardElevation="16dp"
-                    android:layout_below="@+id/linear"
-                    android:layout_marginTop="250dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:paddingLeft="75dp"
-                        android:weightSum="1"
-                        tools:ignore="RtlSymmetry">
-
-                        <LinearLayout
-                            android:layout_width="190dp"
-                            android:layout_height="90dp"
-                            tools:ignore="UselessParent">
-
-                            <Button
-                                android:id="@+id/btnSend"
-                                android:layout_width="match_parent"
-                                android:layout_height="45dp"
-                                android:layout_marginTop="20dp"
-                                android:src="@android:drawable/ic_menu_mylocation"
-                                android:textAllCaps="false"
-                                android:textSize="17dp"
-                                android:text="Compartir"
-                                tools:ignore="HardcodedText" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-            </RelativeLayout>
+            <TextView
+                android:id="@+id/name_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mario Roberto"
+                android:textSize="26sp"
+                android:textColor="@color/black"/>
 
         </LinearLayout>
 
-    </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_name"
+        android:paddingVertical="10dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="70dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_user_txt"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/phone_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+503-77563510"
+                android:textSize="26sp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@+id/relative_phone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/underline"/>
+
+    <View
+        android:layout_below="@+id/relative_name"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/underline"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_house_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:layout_below="@id/relative_phone"
+        android:paddingVertical="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="70dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/country_user_txt"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/country_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SV"
+                android:textSize="26sp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>

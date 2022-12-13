@@ -76,4 +76,7 @@
     <string name="title_news_item_fragment">Titulo de la Noticia</string>
     <string name="item_menu_profile">Mi Perfil</string>
     <string name="item_menu_out_sesion">Cerrar Sesión</string>
+    <string name="country_user_txt">Country/Nacionalidad</string>
+    <string name="phone_user_txt">Phone/Teléfono</string>
+    <string name="name_user_txt">Name/Nombre</string>
 </resources>
