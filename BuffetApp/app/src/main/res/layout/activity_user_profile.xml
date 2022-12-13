@@ -51,7 +51,7 @@
                 android:id="@+id/name_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mario Roberto"
+                android:text="User Name"
                 android:textSize="26sp"
                 android:textColor="@color/black"/>
 
@@ -83,7 +83,7 @@
                 android:id="@+id/phone_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+503-77563510"
+                android:text="+000-00000000"
                 android:textSize="26sp"
                 android:textColor="@color/black"/>
 
@@ -104,13 +104,47 @@
         android:background="@color/underline"/>
 
     <RelativeLayout
-        android:id="@+id/relative_house_no"
+        android:id="@+id/relative_mail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="true"
         android:focusable="true"
         android:background="?attr/selectableItemBackground"
         android:layout_below="@id/relative_phone"
+        android:paddingVertical="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="70dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email/Correo Electronico"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/email_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="usuario@gmail.com"
+                android:textSize="26sp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_house_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:layout_below="@id/relative_mail"
         android:paddingVertical="10dp">
 
         <LinearLayout
@@ -136,5 +170,6 @@
         </LinearLayout>
 
     </RelativeLayout>
+
 
 </RelativeLayout>
