@@ -22,7 +22,7 @@ class UserProfileActivity : AppCompatActivity() {
         if (account != null) {
             val personPhoto = account.photoUrl
             val personName = account.displayName
-            val personId = account.id
+            //val personId = account.id
             val personEmail = account.email
             // Uso el nombre y la URL de la foto para mostrar el nombre y la foto del usuario.
 
@@ -37,14 +37,14 @@ class UserProfileActivity : AppCompatActivity() {
             name_profile.text = personName
             val email_profile: TextView = findViewById(R.id.email_profile)
             email_profile.text = personEmail
-            val phone_user: TextView = findViewById(R.id.phone_user)
-            phone_user.text = personId
+            /*val phone_user: TextView = findViewById(R.id.phone_user)
+            phone_user.text = personId*/
 
 
-            val img_tickete: ImageView = findViewById(R.id.img_tickete)
+            /*val img_tickete: ImageView = findViewById(R.id.img_tickete)
             val txt_tickete: TextView = findViewById(R.id.txt_tickete)
             val img_tickete2: ImageView = findViewById(R.id.img_tickete2)
-            val txt_tickete2: TextView = findViewById(R.id.txt_tickete2)
+            val txt_tickete2: TextView = findViewById(R.id.txt_tickete2)*/
 
 
             //val id = phone_user.text.toString()
