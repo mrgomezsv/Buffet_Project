@@ -5,11 +5,9 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import com.bumptech.glide.Glide
 
 class UserProfileActivity : AppCompatActivity() {
@@ -19,7 +17,6 @@ class UserProfileActivity : AppCompatActivity() {
 
         title = "Perfil"
         linearUser()
-
 
         val account = GoogleSignIn.getLastSignedInAccount(this)
         if (account != null) {
@@ -35,12 +32,14 @@ class UserProfileActivity : AppCompatActivity() {
                 .load(personPhoto)
                 .into(imageView)
 
+
             val name_profile: TextView = findViewById(R.id.name_profile)
             name_profile.text = personName
             val email_profile: TextView = findViewById(R.id.email_profile)
             email_profile.text = personEmail
             val phone_user: TextView = findViewById(R.id.phone_user)
             phone_user.text = personId
+
 
             val img_tickete: ImageView = findViewById(R.id.img_tickete)
             val txt_tickete: TextView = findViewById(R.id.txt_tickete)
