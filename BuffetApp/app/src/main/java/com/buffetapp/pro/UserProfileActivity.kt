@@ -1,7 +1,11 @@
 package com.buffetapp.pro
 
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.auth.api.signin.GoogleSignIn
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.TextView
+import com.bumptech.glide.Glide
 
 class UserProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -9,5 +13,101 @@ class UserProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_user_profile)
 
         title = "Perfil"
+
+        val account = GoogleSignIn.getLastSignedInAccount(this)
+        if (account != null) {
+            val personPhoto = account.photoUrl
+            val personName = account.displayName
+            //val phoneNumber = account.
+            val personEmail = account.email
+            // Uso el nombre y la URL de la foto para mostrar el nombre y la foto del usuario.
+
+            val imageView = findViewById<ImageView>(R.id.image_user)
+            // Carguo la foto de perfil del usuario en ImageView usando Glide.
+            Glide.with(this)
+                .load(personPhoto)
+                .into(imageView)
+
+            val name_profile : TextView = findViewById(R.id.name_profile)
+            name_profile.text = personName
+            val email_profile : TextView = findViewById(R.id.email_profile)
+            email_profile.text = personEmail
+            /*val phone_user : TextView = findViewById(R.id.phone_user)
+            phone_user.text = phoneNumber*/
+        }
+
+
+
+
+        /*val user = FirebaseAuth.getInstance().currentUser
+        val country_profile : TextView = findViewById(R.id.country_profile)
+        if (user != null) {
+            val userProfile = user.providerData[0]
+            val userNationality = userProfile.getProperty("locale")
+            // Use the user's nationality to display their country of origin.
+        }*/
+
+// Get the TextView that you want to display the user's nationality in.
+        /*val textView = findViewById<TextView>(R.id.country_profile)
+
+// Get the user's nationality from Firebase Auth.
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null) {
+            val userProfile = user.providerData[0]
+            val userNationality = userProfile.getString("locale")
+
+            // Set the text of the TextView to the user's nationality.
+            textView.setText(userNationality)
+        }*/
+
+
     }
 }
+
+//El código que ha proporcionado no es válido en Kotlin. No se puede asignar un valor a una vista ImageView de la manera que lo está intentando hacer. En su lugar, puede usar una biblioteca de carga de imágenes, como Glide o Picasso, para cargar la imagen en la vista ImageView. Por ejemplo, si está usando Glide, puede cargar la imagen en la vista ImageView de la siguiente manera:
+//
+//Copy code
+//// Get the ImageView that you want to display the user's profile photo in.
+//val imageView = findViewById<ImageView>(R.id.image_user)
+//
+//// Load the user's profile photo into the ImageView using Glide.
+//Glide.with(this)
+//  .load(personPhoto)
+//  .into(imageView)
+//Tenga en cuenta que esto supone que ha importado la biblioteca de carga de imágenes correctamente en su proyecto y que ha configurado correctamente la vista ImageView en su diseño de interfaz de usuario.
+
+
+
+
+//// Get the ImageView that you want to display the user's profile photo in.
+//val imageView = findViewById<ImageView>(R.id.image_user)
+//
+//// Load the user's profile photo into the ImageView using Glide.
+//Glide.with(this)
+//  .load(personPhoto)
+//  .into(imageView)
+
+
+//// Primero obtenemos la cuenta del usuario que ha iniciado sesión
+//val account = GoogleSignIn.getLastSignedInAccount(this)
+//
+//if (account != null) {
+//    // Si el usuario ha iniciado sesión, obtenemos su nombre y foto de perfil
+//    val userName = account.displayName
+//    val userPhoto = account.photoUrl
+//
+//    // Aquí puedes usar el nombre y la foto del usuario para actualizar tu interfaz de usuario,
+//    // como mostrando el nombre del usuario en un TextView y la foto en un ImageView.
+//}
+//``
+
+
+//implementation 'com.google.android.gms:play-services-auth:17.0.0'
+
+
+//val account = GoogleSignIn.getLastSignedInAccount(this)
+//if (account != null) {
+//  val personName = account.displayName
+//  val personPhoto = account.photoUrl
+//  // Use the name and photo URL to display the user's name and photo.
+//}
