@@ -9,8 +9,9 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/image_user"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:clickable="false"
         android:layout_centerHorizontal="true"
         android:src="@drawable/facebook_avatar"
         android:layout_marginTop="20dp"/>
@@ -29,17 +30,23 @@
         android:id="@+id/relative_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
+        android:clickable="false"
         android:background="?attr/selectableItemBackground"
         android:layout_below="@+id/scode_profile"
+        android:paddingLeft="25dp"
+        android:filterTouchesWhenObscured="true"
         android:paddingVertical="10dp">
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/ic_user"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginStart="70dp">
+            android:layout_marginStart="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -51,8 +58,8 @@
                 android:id="@+id/name_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="User Name"
-                android:textSize="26sp"
+                android:text=""
+                android:textSize="20sp"
                 android:textColor="@color/black"/>
 
         </LinearLayout>
@@ -63,16 +70,21 @@
         android:id="@+id/relative_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/relative_name"
+        android:layout_below="@+id/relative_mail"
+        android:paddingLeft="25dp"
+        android:clickable="false"
         android:paddingVertical="10dp">
 
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/ic_user_id"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="gone"
-            android:layout_marginStart="70dp">
+            android:layout_marginStart="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -84,7 +96,6 @@
                 android:id="@+id/phone_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
                 android:textSize="26sp"
                 android:textColor="@color/black"/>
 
@@ -93,9 +104,24 @@
     </RelativeLayout>
 
     <View
+        android:layout_below="@+id/image_user"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/underline"/>
+
+    <View
+        android:id="@+id/viewSeparator"
         android:layout_below="@+id/relative_phone"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:background="@color/underline"/>
+
+    <View
+        android:layout_below="@+id/relative_mail"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
         android:background="@color/underline"/>
 
     <View
@@ -108,17 +134,22 @@
         android:id="@+id/relative_mail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
+        android:clickable="false"
         android:background="?attr/selectableItemBackground"
-        android:layout_below="@id/relative_phone"
+        android:layout_below="@id/relative_name"
+        android:paddingLeft="25dp"
         android:paddingVertical="10dp">
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/ic_email"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginStart="70dp">
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -130,8 +161,8 @@
                 android:id="@+id/email_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="usuario@gmail.com"
-                android:textSize="26sp"
+                android:text=""
+                android:textSize="20sp"
                 android:textColor="@color/black"/>
 
         </LinearLayout>
@@ -142,17 +173,16 @@
         android:id="@+id/relative_house_no"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
+        android:clickable="false"
         android:background="?attr/selectableItemBackground"
         android:layout_below="@id/relative_mail"
+        android:visibility="gone"
         android:paddingVertical="10dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="gone"
             android:layout_marginStart="70dp">
 
             <TextView
@@ -173,5 +203,101 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_house_no"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="0dp"
+        android:background="?attr/selectableItemBackground"
+        android:paddingVertical="10dp">
+
+        <ImageView
+            android:id="@+id/img_tickete"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:scaleX="0.65"
+            android:scaleY="0.65"
+            android:clickable="false"
+            android:src="@drawable/img_tickete"
+            tools:ignore="NotSibling"
+            />
+
+        <TextView
+            android:id="@+id/txt_tickete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:clickable="false"
+            android:layout_below="@+id/img_tickete"
+            android:text="@string/tickete_legend"
+            />
+
+        <ImageView
+            android:id="@+id/img_tickete2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleX="0.65"
+            android:scaleY="0.65"
+            android:clickable="false"
+            android:src="@drawable/img_sad"
+            tools:ignore="NotSibling"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/txt_tickete2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp"
+            android:layout_marginTop="-15dp"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:clickable="false"
+            android:layout_below="@+id/img_tickete2"
+            android:text="Cierra Seción he ingresa nuevamente pero con el Botón de Google para que puedas participar en la rifa de un Chessecake este 24 de Diciembre"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/topLayoutUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="from"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="buffetproevent.com"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/powerTxtSettings"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/version_extendida"
+                android:textColor="@color/gris"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>

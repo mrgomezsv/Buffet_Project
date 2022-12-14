@@ -160,18 +160,26 @@ class Welcome : AppCompatActivity() {
     private fun mailLogin() {//Login con Correo
         val btnMain: Button = findViewById(R.id.signUpButtonMain)
         btnMain.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            //Volver a activar el rolucionar el problema de la condicion en el perfil de usuario
+            val toast = Toast.makeText(this, "Opción Desactivada por el momento, Ingrese con Google", Toast.LENGTH_SHORT)
+            toast.show()
+
+            /*val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish()
+            finish()*/
         }
     }
 
     private fun userRegis() {//Registrar Usuario
         val btnuserRegis: TextView = findViewById(R.id.textRegis)
         btnuserRegis.setOnClickListener {
-            val intent = Intent(this, RegisterUIWelcome::class.java)
+            //Volver a activar el rolucionar el problema de la condicion en el perfil de usuario
+            val toast = Toast.makeText(this, "Opción Desactivada por el momento, Registrese con Google", Toast.LENGTH_SHORT)
+            toast.show()
+
+            /*val intent = Intent(this, RegisterUIWelcome::class.java)
             startActivity(intent)
-            finish()
+            finish()*/
         }
     }
 

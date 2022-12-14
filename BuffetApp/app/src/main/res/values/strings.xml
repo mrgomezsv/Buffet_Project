@@ -69,7 +69,7 @@
     <string name="por_favor_compruebe_su_conexi_n_de_red">Por favor, compruebe su conexión de red.</string>
     <string name="intentar_otra_vez">Intentar otra vez</string>
     <string name="que_te_mereces_tu_y_tus_invitados">que te mereces tu y tus invitados.</string>
-    <string name="version_extendida">Power by www.buffetproevent.com   v2.0.2</string>
+    <string name="version_extendida">Power by www.buffetproevent.com   v2.0.3</string>
     <string name="antojitos_title">Antojitos de Buffet</string>
     <string name="lunch_title">Almuerzos</string>
     <string name="btn_call">Llámanos</string>
@@ -77,6 +77,7 @@
     <string name="item_menu_profile">Mi Perfil</string>
     <string name="item_menu_out_sesion">Cerrar Sesión</string>
     <string name="country_user_txt">Country/Nacionalidad</string>
-    <string name="phone_user_txt">Phone/Teléfono</string>
+    <string name="phone_user_txt">User Id/ID de Usuario</string>
     <string name="name_user_txt">Name/Nombre</string>
+    <string name="tickete_legend">Felicidades, Estas Participando en la Rifa de un Chessecake este 24 de Diciembre</string>
 </resources>
