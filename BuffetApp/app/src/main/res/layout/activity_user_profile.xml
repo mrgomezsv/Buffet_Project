@@ -123,6 +123,12 @@
         android:layout_height="1dp"
         android:background="@color/underline"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/relative_house_no"
+        android:background="@color/underline"/>
+
     <RelativeLayout
         android:id="@+id/relative_mail"
         android:layout_width="match_parent"
@@ -170,7 +176,6 @@
         android:layout_below="@id/relative_phone"
         android:paddingLeft="25dp"
         android:clickable="false"
-        android:visibility="gone"
         android:paddingVertical="10dp">
 
         <ImageView
@@ -195,7 +200,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SV"
-                android:textSize="26sp"
+                android:textSize="20sp"
                 android:textColor="@color/black"/>
 
         </LinearLayout>
@@ -211,55 +216,6 @@
         android:layout_marginBottom="0dp"
         android:background="?attr/selectableItemBackground"
         android:paddingVertical="10dp">
-
-        <ImageView
-            android:id="@+id/img_tickete"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:scaleType="centerCrop"
-            android:scaleX="0.65"
-            android:scaleY="0.65"
-            android:clickable="false"
-            android:src="@drawable/img_tickete"
-            tools:ignore="NotSibling"
-            />
-
-        <TextView
-            android:id="@+id/txt_tickete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="15dp"
-            android:layout_marginTop="-10dp"
-            android:gravity="center"
-            android:textStyle="italic"
-            android:clickable="false"
-            android:layout_below="@+id/img_tickete"
-            android:text="@string/tickete_legend"
-            />
-
-        <ImageView
-            android:id="@+id/img_tickete2"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:scaleX="0.65"
-            android:scaleY="0.65"
-            android:clickable="false"
-            android:src="@drawable/img_sad"
-            tools:ignore="NotSibling"
-            android:visibility="gone"/>
-
-        <TextView
-            android:id="@+id/txt_tickete2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="15dp"
-            android:layout_marginTop="-15dp"
-            android:gravity="center"
-            android:textStyle="italic"
-            android:clickable="false"
-            android:layout_below="@+id/img_tickete2"
-            android:text="Cierra Seción he ingresa nuevamente pero con el Botón de Google para que puedas participar en la rifa de un Chessecake este 24 de Diciembre"
-            android:visibility="gone"/>
 
         <LinearLayout
             android:id="@+id/topLayoutUser"
