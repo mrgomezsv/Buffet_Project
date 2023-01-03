@@ -21,6 +21,7 @@ import com.buffetapp.pro.databinding.ActivityHomeBinding
 import com.buffetapp.pro.home.PackageBuffet2022.BuffetNavidenoFragment
 import com.buffetapp.pro.home.PackageLunch.LunchFragment
 import com.buffetapp.pro.home.PackageSnack.SnackFragment
+import com.buffetapp.pro.home.ProfileFragment
 import com.buffetapp.pro.home.SettingsFragment
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
@@ -120,12 +121,12 @@ class HomeActivity : AppCompatActivity() {
         bottomNavigation.setOnItemSelectedListener {
                 item ->
             when(item.itemId){
-                R.id.buffet->{
+                /*R.id.buffet->{
                     //toolbar.title = "Buffet 2022"
                     val buffetnavideno = BuffetNavidenoFragment.newInstance()
                     changeFragment(buffetnavideno)
                     return@setOnItemSelectedListener true
-                }
+                }*/
                 R.id.home->{
                     //toolbar.title = "Almuerzos"
                     val homeFragment = LunchFragment.newInstance()
@@ -144,17 +145,23 @@ class HomeActivity : AppCompatActivity() {
                     changeFragment(settingsFragment)
                     return@setOnItemSelectedListener true
                 }
+                R.id.profile->{
+                    //tollbar.title = "Profile User"
+                    val profileFRange = ProfileFragment.newInstance()
+                    changeFragment(profileFRange)
+                    return@setOnItemSelectedListener true
+                }
             }
             false
         }
         //Mostrar por defecto el fragment que definido a continuación
-        /*toolbar.title = "Home"
-        val launch = LunchFragment.newInstance()
-        changeFragment(launch)*/
-
         toolbar.title = "Home"
+        val launch = LunchFragment.newInstance()
+        changeFragment(launch)
+
+        /*toolbar.title = "Home"
         val buffet = BuffetNavidenoFragment.newInstance()
-        changeFragment(buffet)
+        changeFragment(buffet)*/
 
     }
 
