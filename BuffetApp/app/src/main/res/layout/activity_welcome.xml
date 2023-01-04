@@ -111,16 +111,12 @@
                     android:textColorHint="@color/gris"
                     android:visibility="gone" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="25dp"
-                    android:gravity="center"
-                    android:text="Ingresa con tu cuenta de"
-                    android:textColor="@color/gris"
-                    android:textSize="18sp">
-
-                </TextView>
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -148,7 +144,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:visibility="gone"
                     android:orientation="horizontal">
 
                     <TextView
@@ -167,7 +162,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:visibility="gone"
                     android:orientation="vertical">
 
                     <Button
@@ -191,7 +185,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal"
-                    android:visibility="gone"
                     android:orientation="horizontal">
 
                     <TextView
