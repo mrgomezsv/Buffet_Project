@@ -7,6 +7,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -147,9 +148,11 @@ class HomeActivity : AppCompatActivity() {
                 }
                 R.id.profile->{
                     //tollbar.title = "Profile User"
-                    val profileFRange = ProfileFragment.newInstance()
-                    changeFragment(profileFRange)
+                    val profileFragment = ProfileFragment.newInstance()
+                    changeFragment(profileFragment)
                     return@setOnItemSelectedListener true
+                    // Ocultar el image slider
+                    //imageSlider?.visibility = View.GONE
                 }
             }
             false
