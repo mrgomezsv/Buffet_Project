@@ -24,7 +24,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            card_view:srcCompat="@drawable/icon_buffet_dia" />
+            card_view:srcCompat="@drawable/icon_buffet" />
 
         <TextView
             android:id="@+id/item_tituloA"

@@ -21,7 +21,7 @@
             android:layout_marginTop="22dp"
             android:layout_weight="1"
             android:layout_marginStart="0dp"
-            app:srcCompat="@drawable/icon_buffet_dia" />
+            app:srcCompat="@drawable/icon_buffet" />
 
         <LinearLayout
             android:layout_width="match_parent"
