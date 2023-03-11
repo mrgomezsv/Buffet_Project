@@ -212,7 +212,6 @@
                 android:text="Nuestros Servicios"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:visibility="gone"
                 android:fontFamily="@font/klavika_regular_italic"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/gris"/>

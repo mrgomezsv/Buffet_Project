@@ -16,8 +16,8 @@
 
         <ImageView
             android:id="@+id/newImage"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:src="@drawable/icon_buffet"/>
 
         <LinearLayout

@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginTop="50dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -25,8 +26,8 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="150dp"
-                    android:layout_height="200dp"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/icon_buffet" />
@@ -224,7 +225,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textRegis"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginTop="100dp"
+                    android:layout_marginTop="75dp"
                     android:background="?attr/selectableItemBackground"
                     android:clickable="false"
                     android:paddingVertical="10dp">
@@ -234,7 +235,6 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="10dp"
                         android:orientation="vertical">
 
                         <TextView
