@@ -11,8 +11,10 @@ import android.widget.Button
 import android.widget.TextView
 import com.buffetapp.pro.Opciones.OurServices
 import com.buffetapp.pro.R
+import com.buffetapp.pro.UpdateMenusActivity
 import com.buffetapp.pro.WompiActivity
 import com.buffetapp.pro.databinding.FragmentSettingsBinding
+import com.google.android.gms.auth.api.signin.GoogleSignIn
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,6 +51,7 @@ class SettingsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        updateMenus()
         facebookFragment()
         webFragment()
         whatsappFragment()
@@ -56,6 +59,8 @@ class SettingsFragment : Fragment() {
         wompiIntent()
         linkSettings()
         callFragment()
+
+
     }
 
     companion object {
@@ -71,6 +76,21 @@ class SettingsFragment : Fragment() {
         @JvmStatic
         fun newInstance(): SettingsFragment = SettingsFragment()
     }
+
+    private fun updateMenus() {
+        val btnUpdateMenus = view?.findViewById<Button>(R.id.btnUpdateMenus)
+        val account = GoogleSignIn.getLastSignedInAccount(requireContext())
+        if (account?.email == "mrgomez84x@gmail.com") {
+            btnUpdateMenus?.visibility = View.VISIBLE
+            btnUpdateMenus?.setOnClickListener {
+                val intent = Intent(getActivity(), UpdateMenusActivity::class.java)
+                startActivity(intent)
+            }
+        } else {
+            btnUpdateMenus?.visibility = View.GONE
+        }
+    }
+
 
     private fun facebookFragment(){
         val btnFacebookFragment = view?.findViewById<Button>(R.id.btnFacebookFragment)

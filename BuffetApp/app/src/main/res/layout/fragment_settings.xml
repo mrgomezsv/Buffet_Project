@@ -123,6 +123,26 @@
                 android:fontFamily="@font/dancing_normal"/>
 
             <Button
+                android:id="@+id/btnUpdateMenus"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/textView6"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="50dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_700"
+                android:text="Actualizar Menús"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/ic_update"
+                android:visibility="visible"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/gris"/>
+
+            <Button
                 android:id="@+id/btnCallFragment"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
