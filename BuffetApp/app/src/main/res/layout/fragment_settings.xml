@@ -233,6 +233,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:fontFamily="@font/klavika_regular_italic"
+                android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/gris"/>
 
