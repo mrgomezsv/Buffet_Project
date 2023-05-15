@@ -79,5 +79,7 @@
     <string name="country_user_txt">Country/Nacionalidad</string>
     <string name="phone_user_txt">User Id/ID de Usuario</string>
     <string name="name_user_txt">Name/Nombre</string>
+    <string name="remaining_attempts">Intentos restantes: %d</string>
     <string name="tickete_legend">Felicidades, Estas Participando en la Rifa de un Chessecake este 24 de Diciembre</string>
+    <string name="textview11">Ingresa con tu cuenta de</string>
 </resources>

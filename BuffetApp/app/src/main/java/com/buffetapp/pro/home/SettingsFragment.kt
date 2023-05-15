@@ -1,14 +1,20 @@
 package com.buffetapp.pro.home
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import com.buffetapp.pro.Opciones.OurServices
 import com.buffetapp.pro.R
 import com.buffetapp.pro.UpdateMenusActivity
@@ -83,14 +89,60 @@ class SettingsFragment : Fragment() {
         if (account?.email == "mrgomez84x@gmail.com") {
             btnUpdateMenus?.visibility = View.VISIBLE
             btnUpdateMenus?.setOnClickListener {
-                val intent = Intent(getActivity(), UpdateMenusActivity::class.java)
-                startActivity(intent)
+                showPinVerificationDialog()
+                //val intent = Intent(getActivity(), UpdateMenusActivity::class.java)
+                //startActivity(intent)
             }
         } else {
             btnUpdateMenus?.visibility = View.GONE
         }
     }
 
+    private fun showPinVerificationDialog() {
+        val dialogBuilder = AlertDialog.Builder(requireContext())
+        val dialogView = layoutInflater.inflate(R.layout.dialog_pin_verification, null)
+        val pinEditText = dialogView.findViewById<EditText>(R.id.pinEditText)
+        val positiveButton: Button
+
+        dialogBuilder.setView(dialogView)
+            .setTitle("Verificación de PIN")
+            .setPositiveButton("Aceptar", null)
+            .setNegativeButton("Cancelar") { dialog, _ ->
+                dialog.dismiss()
+            }
+
+        val dialog = dialogBuilder.create()
+        dialog.show()
+
+        positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE)
+        positiveButton.isEnabled = false
+
+        pinEditText.addTextChangedListener(object : TextWatcher { //valida la longitud para mostrar o no el boton aceptar
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                val enteredPin = s.toString()
+                positiveButton.isEnabled = enteredPin.length == 4
+            }
+        })
+
+        positiveButton.setOnClickListener {
+            val enteredPin = pinEditText.text.toString()
+            if (enteredPin == "2100") {
+                performIntentAction()
+                dialog.dismiss()
+            } else {
+                Toast.makeText(requireContext(), "PIN incorrecto. Intente nuevamente.", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun performIntentAction() {
+        val intent = Intent(requireContext(), UpdateMenusActivity::class.java)
+        startActivity(intent)
+    }
 
     private fun facebookFragment(){
         val btnFacebookFragment = view?.findViewById<Button>(R.id.btnFacebookFragment)
