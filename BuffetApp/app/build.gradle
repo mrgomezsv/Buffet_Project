@@ -1,106 +1,73 @@
 plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-    id 'com.google.gms.google-services'
-    id 'kotlin-kapt'
+    id 'com.android.application' // Plugin para construir aplicaciones Android
+    id 'kotlin-android' // Plugin para usar Kotlin en aplicaciones Android
+    id 'com.google.gms.google-services' // Plugin para configurar Google Services en tu aplicación
+    id 'kotlin-kapt' // Plugin para usar Kotlin Annotation Processing Tool (KAPT)
 }
 
 android {
-    compileSdk 33
+    compileSdk 34 // Versión de la API de Android para compilar tu aplicación
 
     defaultConfig {
-        applicationId "com.buffetapp.pro"
-        minSdk 21
-        targetSdk 33
-        versionCode 21
-        versionName "2.0.4.3"
+        applicationId "com.buffetapp.pro" // ID de tu aplicación
+        minSdk 21 // Versión mínima de la API de Android que tu aplicación soporta
+        targetSdk 34 // Versión de la API de Android que tu aplicación está dirigida
+        versionCode 21 // Código de versión de tu aplicación
+        versionName "2.0.4.3" // Nombre de la versión de tu aplicación
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner" // Test runner para ejecutar pruebas de instrumentación
     }
 
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled false // No minimiza el código de tu aplicación en la versión de lanzamiento
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro' // Archivos de reglas de ProGuard para tu aplicación
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8 // Versión de Java que tu aplicación soporta
+        targetCompatibility JavaVersion.VERSION_1_8 // Versión de Java que tu aplicación está dirigida
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '1.8' // Versión de la JVM que tu aplicación soporta
     }
     //enable viewBinding
     buildFeatures{
-        viewBinding true
+        viewBinding true // Habilita el View Binding en tu aplicación
     }
-    namespace 'com.buffetapp.pro'
+    namespace 'com.buffetapp.pro' // Espacio de nombres de tu aplicación
 }
 
 dependencies {
-
-    implementation 'androidx.databinding:databinding-runtime:7.3.1'
-    implementation 'com.google.firebase:firebase-auth:21.1.0'
-    implementation 'com.google.firebase:firebase-storage:20.1.0'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.firebase:firebase-storage-ktx:20.1.0'
-    implementation 'com.google.firebase:firebase-firestore-ktx:24.4.1'
-    implementation 'com.google.firebase:firebase-firestore:24.4.1'
-    def activity_version = "1.4.0"
-    def fragment_version = "1.4.1"
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    //Declare the dependency for the Cloud Firestore Library
-    implementation platform('com.google.firebase:firebase-bom:29.0.0')
-    implementation 'com.google.firebase:firebase-analytics-ktx'
-    implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
-    // Declare the dependency for the Cloud Firestore library
-    // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation 'com.google.firebase:firebase-firestore-ktx'
-    // FirebaseUI for Firebase Auth
-    implementation 'com.firebaseui:firebase-ui-auth:8.0.2'
-    // Declare the dependency for the Firebase Authentication library
-    // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation 'com.google.firebase:firebase-auth-ktx'
-    // Also declare the dependency for the Google Play services library and specify its version
-    implementation 'com.google.android.gms:play-services-auth:20.4.0'
-    // Declare the dependency for the Realtime Database library
-    // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation 'com.google.firebase:firebase-database-ktx'
-    //
-    implementation 'com.google.firebase:firebase-messaging-ktx:23.1.1'
-    implementation 'com.google.firebase:firebase-messaging:23.1.1'
-    // Dependencias para Update App
-    implementation("com.google.android.play:core-ktx:1.8.1")
-    //
-    implementation 'androidx.recyclerview:recyclerview:1.2.1'
-    // Declare the dependency for the Cloud Storage library
-    // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation 'com.google.firebase:firebase-storage'
-    //Glide
-    implementation 'com.github.bumptech.glide:glide:4.13.0'
-    kapt 'com.github.bumptech.glide:compiler:4.13.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
-    //noinspection GradleDependency
-    implementation "androidx.activity:activity-ktx:$activity_version"
-    //noinspection GradleDependency
-    implementation "androidx.fragment:fragment-ktx:$fragment_version"
-    //Image Slides
-    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
-    //Implementacion de menu
-    implementation 'com.google.android.material:material:1.7.0'
-    //Dependencias RecyclerView in Fragment View in Firebase Database
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
-    //Dependencia para CircleImage del Layout Porfiel
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'androidx.databinding:databinding-runtime:8.2.0' // Biblioteca para usar Data Binding en tu aplicación
+    implementation platform('com.google.firebase:firebase-bom:29.0.1') // Plataforma BOM de Firebase para manejar las versiones de las bibliotecas de Firebase
+    implementation 'com.google.firebase:firebase-auth-ktx' // Biblioteca para usar Firebase Authentication en tu aplicación
+    implementation 'com.google.firebase:firebase-storage-ktx' // Biblioteca para usar Firebase Storage en tu aplicación
+    implementation 'com.google.firebase:firebase-firestore-ktx' // Biblioteca para usar Firebase Firestore en tu aplicación
+    implementation 'com.google.firebase:firebase-messaging-ktx' // Biblioteca para usar Firebase Cloud Messaging en tu aplicación
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.6' // Biblioteca para usar Navigation Component en fragmentos de tu aplicación
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.6' // Biblioteca para usar Navigation Component en la interfaz de usuario de tu aplicación
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0' // Biblioteca para usar la compatibilidad de la biblioteca de soporte v4
+    def activity_version = "1.4.0" // Versión de la biblioteca de actividades de Android
+    def fragment_version = "1.4.1" // Versión de la biblioteca de fragmentos de Android
+    implementation 'androidx.core:core-ktx:1.12.0' // Biblioteca para usar las utilidades de KTX de Android
+    implementation 'androidx.appcompat:appcompat:1.6.1' // Biblioteca para usar AppCompat en tu aplicación
+    implementation 'com.google.android.material:material:1.11.0' // Biblioteca para usar Material Design en tu aplicación
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // Biblioteca para usar ConstraintLayout en tu aplicación
+    implementation 'com.firebaseui:firebase-ui-auth:8.0.2' // Biblioteca para usar FirebaseUI para Firebase Authentication
+    implementation 'com.google.android.gms:play-services-auth:20.7.0' // Biblioteca para usar Google Play Services para autenticación
+    implementation 'com.google.firebase:firebase-database-ktx' // Biblioteca para usar Firebase Realtime Database en tu aplicación
+    implementation 'com.google.android.play:core-ktx:1.8.1' // Biblioteca para usar las utilidades de KTX de Google Play Core
+    implementation 'androidx.recyclerview:recyclerview:1.3.2' // Biblioteca para usar RecyclerView en tu aplicación
+    implementation 'com.github.bumptech.glide:glide:4.13.0' // Biblioteca para usar Glide para cargar imágenes en tu aplicación
+    kapt 'com.github.bumptech.glide:compiler:4.13.0' // Compilador para Glide
+    testImplementation 'junit:junit:4.13.2' // Biblioteca para usar JUnit para pruebas unitarias
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5' // Biblioteca para usar JUnit para pruebas de Android
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1' // Biblioteca para usar Espresso para pruebas de Android
+    implementation "androidx.activity:activity-ktx:$activity_version" // Biblioteca para usar las utilidades de KTX de Activity
+    implementation "androidx.fragment:fragment-ktx:$fragment_version" // Biblioteca para usar las utilidades de KTX de Fragment
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0' // Biblioteca para usar ImageSlideshow en tu aplicación
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4' // Biblioteca para usar Coroutines en Android
+    implementation 'de.hdodenhof:circleimageview:3.1.0' // Bibli```
 
 }
