@@ -138,7 +138,7 @@
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:drawableLeft="@drawable/ic_update"
-                android:visibility="visible"
+                android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/gris"/>
 

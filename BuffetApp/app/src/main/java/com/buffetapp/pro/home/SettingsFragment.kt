@@ -86,7 +86,7 @@ class SettingsFragment : Fragment() {
     private fun updateMenus() {
         val btnUpdateMenus = view?.findViewById<Button>(R.id.btnUpdateMenus)
         val account = GoogleSignIn.getLastSignedInAccount(requireContext())
-        if (account?.email == "mrgomez84x@gmail.com") {
+        if (account?.email == "mrgomez.dev@gmail.com") {
             btnUpdateMenus?.visibility = View.VISIBLE
             btnUpdateMenus?.setOnClickListener {
                 showPinVerificationDialog()
